@@ -18,6 +18,12 @@ public class datetime {
                 int minute = sc.nextInt();
                 System.out.print("Second: ");
                 int second = sc.nextInt();
+                System.out.print("Millisecond: ");
+                int millisecond = sc.nextInt();
+                System.out.print("Microsecond: ");
+                int microsecond = sc.nextInt();
+                System.out.print("Nanosecond: ");
+                int nanosecond = sc.nextInt();
                 GregorianCalendar datetime = new GregorianCalendar(year, month, day, hour, minute, second); // Get the
                                                                                                             // date and
                                                                                                             // time
@@ -26,16 +32,16 @@ public class datetime {
                                                                                                             // user
                                                                                                             // entered
                                                                                                             // input
-                LocalDateTime dateandtime = LocalDateTime.of(year, month, day, hour, minute, second); // Convert
-                                                                                                      // datetime of
-                                                                                                      // GregorianCalendar
-                                                                                                      // object to
-                                                                                                      // LocalDateTime
-                                                                                                      // object named
-                                                                                                      // dateandtime
-                                                                                                      // without time
-                                                                                                      // zone
-                                                                                                      // information
+                LocalDateTime dateandtime = LocalDateTime.of(year, month, day, hour, minute, second)
+                                .withNano(millisecond * 1000000 + microsecond * 1000 + nanosecond); // Convert datetime
+                                                                                                    // of
+                                                                                                    // GregorianCalendar
+                                                                                                    // object to
+                                                                                                    // LocalDateTime
+                                                                                                    // object named
+                                                                                                    // dateandtime
+                                                                                                    // without time zone
+                                                                                                    // information
                 DateTimeFormatter era1 = DateTimeFormatter.ofPattern("GGG"); // Format the date and time values with
                                                                              // specified pattern
                 DateTimeFormatter era2 = DateTimeFormatter.ofPattern("GGGG");

@@ -18,6 +18,12 @@
     <input type="number" name="minute" id="minute" min="0" max="59" required><br>
     <label for="second">Second:</label><br>
     <input type="number" name="second" id="second" min="0" max="59" required><br>
+    <label for="millisecond">Millisecond:</label><br>
+    <input type="number" name="millisecond" id="millisecond" min="0" max="999" required value="0"><br>
+    <label for="microsecond">Microsecond:</label><br>
+    <input type="number" name="microsecond" id="microsecond" min="0" max="999" required value="0"><br>
+    <label for="nanosecond">Nanosecond:</label><br>
+    <input type="number" name="nanosecond" id="nanosecond" min="0" max="999" required value="0"><br>
     <button type="button" onclick="setCurrentDate()">Set Current Local Date and Time</button>
     <button type="button" onclick="setCurrentUtcDate()">Set Current UTC Date and Time</button>
     <input type="submit" value="Submit">
