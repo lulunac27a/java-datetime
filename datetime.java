@@ -1,6 +1,8 @@
 import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 import java.time.ZoneOffset;
+import java.time.ZonedDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.Scanner;
 
@@ -30,7 +32,7 @@ public class datetime {
                                                                                     // GregorianCalendar object to
                                                                                     // LocalDateTime object named
                                                                                     // enteredDateAndTime without time
-                                                                                    // zone information
+                                                                                    // zone
         DateTimeFormatter era1 = DateTimeFormatter.ofPattern("GGG"); // Format the date and time values with specified
                                                                      // pattern
         DateTimeFormatter era2 = DateTimeFormatter.ofPattern("GGGG");
@@ -71,13 +73,23 @@ public class datetime {
         DateTimeFormatter millisecondOfDay = DateTimeFormatter.ofPattern("A");
         DateTimeFormatter nanosecondOfSecond = DateTimeFormatter.ofPattern("n");
         DateTimeFormatter nanosecondOfDay = DateTimeFormatter.ofPattern("N");
-        DateTimeFormatter timezoneId2 = DateTimeFormatter.ofPattern("VV");
+        DateTimeFormatter timezoneId = DateTimeFormatter.ofPattern("VV");
         DateTimeFormatter timezoneName = DateTimeFormatter.ofPattern("z");
-        DateTimeFormatter timezoneName2 = DateTimeFormatter.ofPattern("zz");
+        DateTimeFormatter timezoneName2 = DateTimeFormatter.ofPattern("zzzz");
         DateTimeFormatter timezoneOffset = DateTimeFormatter.ofPattern("OOOO");
         DateTimeFormatter timezoneOffsetZ = DateTimeFormatter.ofPattern("XXXXX");
         DateTimeFormatter timezoneOffsetX = DateTimeFormatter.ofPattern("xxxxx");
         DateTimeFormatter timezoneOffset2 = DateTimeFormatter.ofPattern("ZZZZZ");
+        DateTimeFormatter timezoneOffsetZ1 = DateTimeFormatter.ofPattern("ZZZZ");
+        ZonedDateTime enteredDateAndTimeTimezone = ZonedDateTime.of(enteredDateAndTime, ZoneId.systemDefault());// Get
+                                                                                                                // time
+                                                                                                                // zone
+                                                                                                                // of
+                                                                                                                // entered
+                                                                                                                // date
+                                                                                                                // and
+                                                                                                                // time
+                                                                                                                // values
         System.out.println("Era: " + era1.format(enteredDateAndTime) + " (" + era2.format(enteredDateAndTime) + ")"
                 + " (" + era3.format(enteredDateAndTime) + ")"); // Print the date and time values with formatted date
                                                                  // and time pattern
@@ -112,8 +124,17 @@ public class datetime {
         System.out.println("Millisecond of Day: " + millisecondOfDay.format(enteredDateAndTime));
         System.out.println("Nanosecond: " + nanosecondOfSecond.format(enteredDateAndTime));
         System.out.println("Nanosecond of Day: " + nanosecondOfDay.format(enteredDateAndTime));
-        LocalDateTime dateAndTimeNow = LocalDateTime.now(); // Get the current date and time based on local computer
-                                                            // date and time
+        System.out.println("Time Zone ID: " + timezoneId.format(enteredDateAndTimeTimezone));
+        System.out.println("Time Zone: " + timezoneName2.format(enteredDateAndTimeTimezone) + " ("
+                + timezoneName.format(enteredDateAndTimeTimezone) + ")");
+        System.out.println("Localized Time Zone Offset: " + timezoneOffset.format(enteredDateAndTimeTimezone) + " ("
+                + timezoneOffset2.format(enteredDateAndTimeTimezone) + ")");
+        System.out.println("Time Zone Offset: " + timezoneOffsetZ.format(enteredDateAndTimeTimezone) + " ("
+                + timezoneOffsetX.format(enteredDateAndTimeTimezone) + ")" + " ("
+                + timezoneOffsetZ1.format(enteredDateAndTimeTimezone) + ")");
+
+        ZonedDateTime dateAndTimeNow = ZonedDateTime.now(); // Get the current date and time based on local computer
+                                                            // date and time with local time zone
         System.out.println("Current Era: " + era1.format(dateAndTimeNow) + " (" + era2.format(dateAndTimeNow) + ")"
                 + " (" + era3.format(dateAndTimeNow) + ")"); // Print the formatted date and time values in current
                                                              // local date and time
@@ -121,13 +142,13 @@ public class datetime {
         System.out.println(
                 "Current Era Year: " + yearEra.format(dateAndTimeNow) + " (" + yearEra2.format(dateAndTimeNow) + ")");
         System.out.println("Current Day of Year: " + dayOfYear.format(dateAndTimeNow));
-        System.out.println("Month of Year: " + monthOfYear.format(dateAndTimeNow) + " ("
+        System.out.println("Current Month of Year: " + monthOfYear.format(dateAndTimeNow) + " ("
                 + monthOfYear2.format(dateAndTimeNow) + ")" + " (" + monthOfYear3.format(dateAndTimeNow) + ")" + " ("
                 + monthOfYear4.format(dateAndTimeNow) + ")");
         System.out.println("Current Day of Month: " + dayOfMonth.format(dateAndTimeNow));
         System.out.println("Current Quarter: " + quarter.format(dateAndTimeNow) + " (" + quarter2.format(dateAndTimeNow)
                 + ")" + " (" + quarter3.format(dateAndTimeNow) + ")");
-        System.out.println("ISO Week-based Year: " + weekBasedYear.format(dateAndTimeNow) + " ("
+        System.out.println("Current ISO Week-based Year: " + weekBasedYear.format(dateAndTimeNow) + " ("
                 + weekBasedYear2.format(dateAndTimeNow) + ")");
         System.out.println("Current Week of Year: " + weekOfYear.format(dateAndTimeNow));
         System.out.println("Current Week of Month: " + weekOfMonth.format(dateAndTimeNow));
@@ -148,8 +169,19 @@ public class datetime {
         System.out.println("Current Millisecond of Day: " + millisecondOfDay.format(dateAndTimeNow));
         System.out.println("Current Nanosecond: " + nanosecondOfSecond.format(dateAndTimeNow));
         System.out.println("Current Nanosecond of Day: " + nanosecondOfDay.format(dateAndTimeNow));
-        Instant currentUtcDateAndTime = Instant.now();
-        LocalDateTime utcDateAndTimeNow = LocalDateTime.ofInstant(currentUtcDateAndTime, ZoneOffset.UTC);
+        System.out.println("Current Time Zone ID: " + timezoneId.format(dateAndTimeNow));
+        System.out.println("Current Time Zone: " + timezoneName2.format(dateAndTimeNow) + " ("
+                + timezoneName.format(dateAndTimeNow) + ")");
+        System.out.println("Current Localized Time Zone Offset: " + timezoneOffset.format(dateAndTimeNow) + " ("
+                + timezoneOffset2.format(dateAndTimeNow) + ")");
+        System.out.println("Current Time Zone Offset: " + timezoneOffsetZ.format(dateAndTimeNow) + " ("
+                + timezoneOffsetX.format(dateAndTimeNow) + ")" + " (" + timezoneOffsetZ1.format(dateAndTimeNow) + ")");
+        Instant currentUtcDateAndTime = Instant.now();// Get the current UTC date and time using Instant object
+        LocalDateTime utcDateAndTimeNow = LocalDateTime.ofInstant(currentUtcDateAndTime, ZoneOffset.UTC);// Convert from
+                                                                                                         // Instant
+                                                                                                         // object to
+                                                                                                         // LocalDateTime
+                                                                                                         // object
         System.out.println("Current UTC Era: " + era1.format(utcDateAndTimeNow) + " (" + era2.format(utcDateAndTimeNow)
                 + ")" + " (" + era3.format(utcDateAndTimeNow) + ")"); // Print the formatted date and time values in
                                                                       // current local date and time
@@ -158,13 +190,13 @@ public class datetime {
         System.out.println("Current UTC Era Year: " + yearEra.format(utcDateAndTimeNow) + " ("
                 + yearEra2.format(utcDateAndTimeNow) + ")");
         System.out.println("Current UTC Day of Year: " + dayOfYear.format(utcDateAndTimeNow));
-        System.out.println("Month of Year: " + monthOfYear.format(utcDateAndTimeNow) + " ("
+        System.out.println("Current UTC Month of Year: " + monthOfYear.format(utcDateAndTimeNow) + " ("
                 + monthOfYear2.format(utcDateAndTimeNow) + ")" + " (" + monthOfYear3.format(utcDateAndTimeNow) + ")"
                 + " (" + monthOfYear4.format(utcDateAndTimeNow) + ")");
         System.out.println("Current UTC Day of Month: " + dayOfMonth.format(utcDateAndTimeNow));
         System.out.println("Current UTC Quarter: " + quarter.format(utcDateAndTimeNow) + " ("
                 + quarter2.format(utcDateAndTimeNow) + ")" + " (" + quarter3.format(utcDateAndTimeNow) + ")");
-        System.out.println("ISO Week-based Year: " + weekBasedYear.format(utcDateAndTimeNow) + " ("
+        System.out.println("Current UTC ISO Week-based Year: " + weekBasedYear.format(utcDateAndTimeNow) + " ("
                 + weekBasedYear2.format(utcDateAndTimeNow) + ")");
         System.out.println("Current UTC Week of Year: " + weekOfYear.format(utcDateAndTimeNow));
         System.out.println("Current UTC Week of Month: " + weekOfMonth.format(utcDateAndTimeNow));
