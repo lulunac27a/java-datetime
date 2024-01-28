@@ -47,4 +47,7 @@ function setCurrentUtcDate() {
 }
 function getDaysInMonth() {
     day.max = new Date(year.value, month.value, 0).getDate();
+    if (day.value > day.max) {
+        day.value = day.max;
+    }
 }
