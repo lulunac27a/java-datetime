@@ -45,3 +45,6 @@ function setCurrentUtcDate() {
     microsecond.value = 0;
     nanosecond.value = 0;
 }
+function getDaysInMonth() {
+    day.max = new Date(year.value, month.value, 0).getDate();
+}
