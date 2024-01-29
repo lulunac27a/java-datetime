@@ -1,36 +1,104 @@
 <html>
-
-<head>
-    <link rel="stylesheet" type="text/css" href="datetime.css">
+  <head>
+    <link rel="stylesheet" type="text/css" href="datetime.css" />
     <title>Get date and time in all supported formats in Java</title>
     <h1>Enter date and time values</h1>
-</head>
+  </head>
 
-<body>
-<form method="post" action="datetime.jsp">
-    <label for="year">Year:</label><br>
-    <input type="number" name="year" id="year" required onchange="getDaysInMonth()"><br>
-    <label for="month">Month:</label><br>
-    <input type="number" name="month" id="month" min="1" max="12" required onchange="getDaysInMonth()"><br>
-    <label for="day">Day:</label><br>
-    <input type="number" name="day" id="day" min="1" max="31" required><br>
-    <label for="hour">Hour:</label><br>
-    <input type="number" name="hour" id="hour" min="0" max="23" required><br>
-    <label for="minute">Minute:</label><br>
-    <input type="number" name="minute" id="minute" min="0" max="59" required><br>
-    <label for="second">Second:</label><br>
-    <input type="number" name="second" id="second" min="0" max="59" required><br>
-    <label for="millisecond">Millisecond:</label><br>
-    <input type="number" name="millisecond" id="millisecond" min="0" max="999" required value="0"><br>
-    <label for="microsecond">Microsecond:</label><br>
-    <input type="number" name="microsecond" id="microsecond" min="0" max="999" required value="0"><br>
-    <label for="nanosecond">Nanosecond:</label><br>
-    <input type="number" name="nanosecond" id="nanosecond" min="0" max="999" required value="0"><br>
-    <button type="button" onclick="setCurrentDate()">Set Current Local Date and Time</button>
-    <button type="button" onclick="setCurrentUtcDate()">Set Current UTC Date and Time</button>
-    <input type="submit" value="Submit">
-</form>
-<script src="datetime.js"></script>
-</body>
-
+  <body>
+    <form method="post" action="datetime.jsp">
+      <label for="year">Year:</label><br />
+      <input
+        type="number"
+        name="year"
+        id="year"
+        required
+        onchange="getDaysInMonth()"
+      /><br />
+      <label for="month">Month:</label><br />
+      <input
+        type="number"
+        name="month"
+        id="month"
+        min="1"
+        max="12"
+        required
+        onchange="getDaysInMonth()"
+      /><br />
+      <label for="day">Day:</label><br />
+      <input
+        type="number"
+        name="day"
+        id="day"
+        min="1"
+        max="31"
+        required
+      /><br />
+      <label for="hour">Hour:</label><br />
+      <input
+        type="number"
+        name="hour"
+        id="hour"
+        min="0"
+        max="23"
+        required
+      /><br />
+      <label for="minute">Minute:</label><br />
+      <input
+        type="number"
+        name="minute"
+        id="minute"
+        min="0"
+        max="59"
+        required
+      /><br />
+      <label for="second">Second:</label><br />
+      <input
+        type="number"
+        name="second"
+        id="second"
+        min="0"
+        max="59"
+        required
+      /><br />
+      <label for="millisecond">Millisecond:</label><br />
+      <input
+        type="number"
+        name="millisecond"
+        id="millisecond"
+        min="0"
+        max="999"
+        required
+        value="0"
+      /><br />
+      <label for="microsecond">Microsecond:</label><br />
+      <input
+        type="number"
+        name="microsecond"
+        id="microsecond"
+        min="0"
+        max="999"
+        required
+        value="0"
+      /><br />
+      <label for="nanosecond">Nanosecond:</label><br />
+      <input
+        type="number"
+        name="nanosecond"
+        id="nanosecond"
+        min="0"
+        max="999"
+        required
+        value="0"
+      /><br />
+      <button type="button" onclick="setCurrentDate()">
+        Set Current Local Date and Time
+      </button>
+      <button type="button" onclick="setCurrentUtcDate()">
+        Set Current UTC Date and Time
+      </button>
+      <input type="submit" value="Submit" />
+    </form>
+    <script src="datetime.js"></script>
+  </body>
 </html>
