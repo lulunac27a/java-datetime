@@ -5,4 +5,4 @@ supported formats.
 
 ## Instructions
 
-Copy this directory to your Java web server root directory, and start the server.
+Copy this directory to your Java web server root directory, and start the web server.
