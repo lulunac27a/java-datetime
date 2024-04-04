@@ -8,8 +8,8 @@ Enter date and time values
 </h1>
 </head>
 <body>
-<cfset dateAndTimeNow = now()>
-<cfform method = "post">
+<cfset dateAndTimeNow = now()><!---set input form values to current date and time--->
+<cfform method = "post"><!---send post request when form is submitted--->
     Year: 
     <cfinput type = "text" name = "year" value = "#Year(dateAndTimeNow)#" validate = "integer">
     <br/>
@@ -34,8 +34,10 @@ Enter date and time values
     <br/>
     <input type = "submit" value = "Submit" name = "submit">
 </cfform>
-<cfif structKeyExists(form, "submit")>
+<cfif structKeyExists(form, "submit")><!---check if form is submitted--->
     <cfset enteredDate = CreateDateTime(form.year, form.month, form.day, form.hour, form.minute, form.second, form.millisecond)>
+<!---set entered date to form input values--->
+    <!---output the date and time in all supported formats--->
     <cfoutput>Day of Month: #dateTimeFormat(enteredDate, "d")#</cfoutput>
     <br/>
     <cfoutput>Day of Week: #dateTimeFormat(enteredDate, "EEE")# (#dateTimeFormat(enteredDate, "EEEE")#)</cfoutput>
