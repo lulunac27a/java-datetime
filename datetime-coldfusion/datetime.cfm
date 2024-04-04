@@ -73,4 +73,56 @@ Enter date and time values
     <br/>
     <cfoutput>ISO Format: #dateTimeFormat(enteredDate, "iso")#</cfoutput>
     <br/>
+<cfelse><!---if form is not submitted any input data--->
+    <!---output the current date and time in all supported formats--->
+    <cfoutput>Current Day of Month: #dateTimeFormat(dateAndTimeNow, "d")#</cfoutput>
+    <br/>
+    <cfoutput>
+        Current Day of Week: #dateTimeFormat(dateAndTimeNow, "EEE")# (#dateTimeFormat(dateAndTimeNow, "EEEE")#
+        )
+    </cfoutput>
+    <br/>
+    <cfoutput>
+        Current Month: #dateTimeFormat(dateAndTimeNow, "m")# (#dateTimeFormat(dateAndTimeNow, "mmm")#
+        ) (#dateTimeFormat(dateAndTimeNow, "mmmm")#) (#dateTimeFormat(dateAndTimeNow, "M")#)
+    </cfoutput>
+    <br/>
+    <cfoutput>Current Day of Year: #dateTimeFormat(dateAndTimeNow, "D")#</cfoutput>
+    <br/>
+    <cfoutput>
+        Current Year: #dateTimeFormat(dateAndTimeNow, "yyyy")# (#dateTimeFormat(dateAndTimeNow, "yy")#
+        )
+    </cfoutput>
+    <br/>
+    <cfoutput>
+        Current Week Year: #dateTimeFormat(dateAndTimeNow, "YYYY")# (#dateTimeFormat(dateAndTimeNow, "Y")#
+        )
+    </cfoutput>
+    <br/>
+    <cfoutput>Current Period/Era: #dateTimeFormat(dateAndTimeNow, "G")#</cfoutput>
+    <br/>
+    <cfoutput>Current 12 Hour Format: #dateTimeFormat(dateAndTimeNow, "h")#</cfoutput>
+    <br/>
+    <cfoutput>Current 24 Hour Format: #dateTimeFormat(dateAndTimeNow, "H")#</cfoutput>
+    <br/>
+    <cfoutput>Current Minute: #dateTimeFormat(dateAndTimeNow, "n")#</cfoutput>
+    <br/>
+    <cfoutput>Current Second: #dateTimeFormat(dateAndTimeNow, "s")#</cfoutput>
+    <br/>
+    <cfoutput>
+        Current Milliseconds: #dateTimeFormat(dateAndTimeNow, "l")# (#dateTimeFormat(dateAndTimeNow, "L")#
+        )
+    </cfoutput>
+    <br/>
+    <cfoutput>
+        Current Time Marker String: #dateTimeFormat(dateAndTimeNow, "t")# (#dateTimeFormat(dateAndTimeNow, "tt")#
+        )
+    </cfoutput>
+    <br/>
+    <cfoutput>Current Week of Year: #dateTimeFormat(dateAndTimeNow, "w")#</cfoutput>
+    <br/>
+    <cfoutput>Current Week of Month: #dateTimeFormat(dateAndTimeNow, "W")#</cfoutput>
+    <br/>
+    <cfoutput>Current ISO Format: #dateTimeFormat(dateAndTimeNow, "iso")#</cfoutput>
+    <br/>
 </cfif>
