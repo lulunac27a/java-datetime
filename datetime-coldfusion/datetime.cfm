@@ -14,23 +14,28 @@ Enter date and time values
     <cfinput type = "text" name = "year" value = "#Year(dateAndTimeNow)#" validate = "integer">
     <br/>
     Month: 
-    <cfinput type = "text" name = "month" value = "#Month(dateAndTimeNow)#" validate = "integer">
+    <cfinput type = "text" name = "month" value = "#Month(dateAndTimeNow)#" validate = "integer"
+             range = "1,12">
     <br/>
     Day: 
-    <cfinput type = "text" name = "day" value = "#Day(dateAndTimeNow)#" validate = "integer">
+    <cfinput type = "text" name = "day" value = "#Day(dateAndTimeNow)#" validate = "integer"
+             range = "1,31">
     <br/>
     Hour: 
-    <cfinput type = "text" name = "hour" value = "#Hour(dateAndTimeNow)#" validate = "integer">
+    <cfinput type = "text" name = "hour" value = "#Hour(dateAndTimeNow)#" validate = "integer"
+             range = "0,23">
     <br/>
     Minute: 
-    <cfinput type = "text" name = "minute" value = "#Minute(dateAndTimeNow)#" validate = "integer">
+    <cfinput type = "text" name = "minute" value = "#Minute(dateAndTimeNow)#" validate = "integer"
+             range = "0,59">
     <br/>
     Second: 
-    <cfinput type = "text" name = "second" value = "#Second(dateAndTimeNow)#" validate = "integer">
+    <cfinput type = "text" name = "second" value = "#Second(dateAndTimeNow)#" validate = "integer"
+             range = "0,59">
     <br/>
     Millisecond: 
     <cfinput type = "text" name = "millisecond" value = "#Millisecond(dateAndTimeNow)#" 
-             validate = "integer">
+             validate = "integer" range = "0,999">
     <br/>
     <input type = "submit" value = "Submit" name = "submit">
 </cfform>
