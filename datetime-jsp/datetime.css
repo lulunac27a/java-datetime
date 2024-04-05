@@ -6,6 +6,6 @@ body {
     line-height: 120%;
 }
 
-.output {
+#output {
     font-weight: bold; /*bold text for printed output*/
 }
