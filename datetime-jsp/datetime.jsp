@@ -3,7 +3,8 @@
 <%@ page import="java.time.format.DateTimeFormatter" %>
 <%@ page import="java.util.GregorianCalendar" %>
 <%@ page import="java.util.Scanner" %>
-<html>
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
     <link rel="stylesheet" type="text/css" href="datetime.css">
