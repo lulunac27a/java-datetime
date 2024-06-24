@@ -1,22 +1,22 @@
-var year = document.querySelector("#year");
-var month = document.querySelector("#month");
-var day = document.querySelector("#day");
-var hour = document.querySelector("#hour");
-var minute = document.querySelector("#minute");
-var second = document.querySelector("#second");
-var millisecond = document.querySelector("#millisecond");
-var microsecond = document.querySelector("#microsecond");
-var nanosecond = document.querySelector("#nanosecond");
+let year = document.querySelector("#year");
+let month = document.querySelector("#month");
+let day = document.querySelector("#day");
+let hour = document.querySelector("#hour");
+let minute = document.querySelector("#minute");
+let second = document.querySelector("#second");
+let millisecond = document.querySelector("#millisecond");
+let microsecond = document.querySelector("#microsecond");
+let nanosecond = document.querySelector("#nanosecond");
 
 function setCurrentDate() {
-    var currentDate = new Date();
-    var currentYear = currentDate.getFullYear();
-    var currentMonth = currentDate.getMonth() + 1; //Add 1 to month because 0 is January in JavaScript and 1 in Java
-    var currentDay = currentDate.getDate();
-    var currentHour = currentDate.getHours();
-    var currentMinute = currentDate.getMinutes();
-    var currentSecond = currentDate.getSeconds();
-    var currentMillisecond = currentDate.getMilliseconds();
+    const currentDate = new Date();
+    const currentYear = currentDate.getFullYear();
+    const currentMonth = currentDate.getMonth() + 1; //Add 1 to month because 0 is January in JavaScript and 1 in Java
+    const currentDay = currentDate.getDate();
+    const currentHour = currentDate.getHours();
+    const currentMinute = currentDate.getMinutes();
+    const currentSecond = currentDate.getSeconds();
+    const currentMillisecond = currentDate.getMilliseconds();
     year.value = currentYear; //set the input values to current local date and time
     month.value = currentMonth;
     day.value = currentDay;
@@ -29,14 +29,14 @@ function setCurrentDate() {
 }
 
 function setCurrentUtcDate() {
-    var currentDate = new Date();
-    var currentUtcYear = currentDate.getUTCFullYear();
-    var currentUtcMonth = currentDate.getUTCMonth() + 1;
-    var currentUtcDay = currentDate.getUTCDate();
-    var currentUtcHour = currentDate.getUTCHours();
-    var currentUtcMinute = currentDate.getUTCMinutes();
-    var currentUtcSecond = currentDate.getUTCSeconds();
-    var currentUtcMillisecond = currentDate.getUTCMilliseconds();
+    const currentDate = new Date();
+    const currentUtcYear = currentDate.getUTCFullYear();
+    const currentUtcMonth = currentDate.getUTCMonth() + 1;
+    const currentUtcDay = currentDate.getUTCDate();
+    const currentUtcHour = currentDate.getUTCHours();
+    const currentUtcMinute = currentDate.getUTCMinutes();
+    const currentUtcSecond = currentDate.getUTCSeconds();
+    const currentUtcMillisecond = currentDate.getUTCMilliseconds();
     year.value = currentUtcYear; //set the input values to current UTC date and time
     month.value = currentUtcMonth;
     day.value = currentUtcDay;
