@@ -12,138 +12,139 @@ Enter date and time values
 <cfset dateAndTimeNow = now()><!---set input form values to current date and time--->
 <cfform method = "post"><!---send post request when form is submitted--->
     Year: 
-    <cfinput type = "text" name = "year" value = "#Year(dateAndTimeNow)#" validate = "integer">
-    <br/>
+    <cfinput type = "text" id = "year" name = "year" value = "#Year(dateAndTimeNow)#"
+             validate = "integer">
+    <br>
     Month: 
-    <cfinput type = "text" name = "month" value = "#Month(dateAndTimeNow)#" validate = "integer"
-             range = "1,12">
-    <br/>
+    <cfinput type = "text" id = "month" name = "month" value = "#Month(dateAndTimeNow)#"
+             validate = "integer" range = "1,12">
+    <br>
     Day: 
-    <cfinput type = "text" name = "day" value = "#Day(dateAndTimeNow)#" validate = "integer"
-             range = "1,31">
-    <br/>
+    <cfinput type = "text" id = "day" name = "day" value = "#Day(dateAndTimeNow)#"
+             validate = "integer" range = "1,31">
+    <br>
     Hour: 
-    <cfinput type = "text" name = "hour" value = "#Hour(dateAndTimeNow)#" validate = "integer"
-             range = "0,23">
-    <br/>
+    <cfinput type = "text" id = "hour" name = "hour" value = "#Hour(dateAndTimeNow)#"
+             validate = "integer" range = "0,23">
+    <br>
     Minute: 
-    <cfinput type = "text" name = "minute" value = "#Minute(dateAndTimeNow)#" validate = "integer"
-             range = "0,59">
-    <br/>
+    <cfinput type = "text" id = "minute" name = "minute" value = "#Minute(dateAndTimeNow)#"
+             validate = "integer" range = "0,59">
+    <br>
     Second: 
-    <cfinput type = "text" name = "second" value = "#Second(dateAndTimeNow)#" validate = "integer"
-             range = "0,59">
-    <br/>
+    <cfinput type = "text" id = "second" name = "second" value = "#Second(dateAndTimeNow)#"
+             validate = "integer" range = "0,59">
+    <br>
     Millisecond: 
-    <cfinput type = "text" name = "millisecond" value = "#Millisecond(dateAndTimeNow)#" 
-             validate = "integer" range = "0,999">
-    <br/>
+    <cfinput type = "text" id = "millisecond" name = "millisecond" 
+             value = "#Millisecond(dateAndTimeNow)#" validate = "integer" range = "0,999">
+    <br>
     <input type = "submit" value = "Submit" name = "submit">
 </cfform>
 <cfif structKeyExists(form, "submit")><!---check if form is submitted--->
     <cfset enteredDate = CreateDateTime(form.year, form.month, form.day, form.hour, form.minute, form.second, form.millisecond)>
-<!---set entered date to form input values--->
+    <!---set entered date to form input values--->
     <!---output the date and time in all supported formats--->
     <cfoutput>
         Day of Month: 
         <span id = "output">#dateTimeFormat(enteredDate, "d")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Day of Week: 
         <span id = "output">#dateTimeFormat(enteredDate, "EEE")# (#dateTimeFormat(enteredDate, "EEEE")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Month: 
         <span id = "output">#dateTimeFormat(enteredDate, "m")# (#dateTimeFormat(enteredDate, "mmm")#
         ) (#dateTimeFormat(enteredDate, "mmmm")#) (#dateTimeFormat(enteredDate, "M")#)
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Day of Year: 
         <span id = "output">#dateTimeFormat(enteredDate, "D")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Year: 
         <span id = "output">#dateTimeFormat(enteredDate, "yyyy")# (#dateTimeFormat(enteredDate, "yy")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Week Year: 
         <span id = "output">#dateTimeFormat(enteredDate, "YYYY")# (#dateTimeFormat(enteredDate, "Y")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Period/Era: 
         <span id = "output">#dateTimeFormat(enteredDate, "G")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         12 Hour Format: 
         <span id = "output">#dateTimeFormat(enteredDate, "h")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         24 Hour Format: 
         <span id = "output">#dateTimeFormat(enteredDate, "H")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Minute: 
         <span id = "output">#dateTimeFormat(enteredDate, "n")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Second: 
         <span id = "output">#dateTimeFormat(enteredDate, "s")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Milliseconds: 
         <span id = "output">#dateTimeFormat(enteredDate, "l")# (#dateTimeFormat(enteredDate, "L")#)
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Time Marker String: 
         <span id = "output">#dateTimeFormat(enteredDate, "t")# (#dateTimeFormat(enteredDate, "tt")#)
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Week of Year: 
         <span id = "output">#dateTimeFormat(enteredDate, "w")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Week of Month: 
         <span id = "output">#dateTimeFormat(enteredDate, "W")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         ISO Format: 
         <span id = "output">#dateTimeFormat(enteredDate, "iso")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
 <cfelse><!---if form is not submitted any input data--->
     <!---output the current date and time in all supported formats--->
     <cfoutput>
@@ -151,101 +152,101 @@ Enter date and time values
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "d")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Day of Week: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "EEE")# (#dateTimeFormat(dateAndTimeNow, "EEEE")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Month: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "m")# (#dateTimeFormat(dateAndTimeNow, "mmm")#
         ) (#dateTimeFormat(dateAndTimeNow, "mmmm")#) (#dateTimeFormat(dateAndTimeNow, "M")#)
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Day of Year: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "D")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Year: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "yyyy")# (#dateTimeFormat(dateAndTimeNow, "yy")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Week Year: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "YYYY")# (#dateTimeFormat(dateAndTimeNow, "Y")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Period/Era: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "G")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current 12 Hour Format: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "h")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current 24 Hour Format: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "H")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Minute: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "n")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Second: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "s")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Milliseconds: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "l")# (#dateTimeFormat(dateAndTimeNow, "L")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Time Marker String: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "t")# (#dateTimeFormat(dateAndTimeNow, "tt")#
         )
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Week of Year: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "w")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current Week of Month: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "W")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
     <cfoutput>
         Current ISO Format: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "iso")#
         </span>
     </cfoutput>
-    <br/>
+    <br>
 </cfif>
