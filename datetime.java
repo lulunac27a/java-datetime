@@ -61,7 +61,7 @@ public class datetime {
         DateTimeFormatter timezoneOffset2 = DateTimeFormatter.ofPattern("ZZZZZ");
         DateTimeFormatter timezoneOffsetZ1 = DateTimeFormatter.ofPattern("ZZZZ");
 
-        try {
+        try {// make sure date and time input is a vaild integer
             System.out.print("Year: ");
             year = sc.nextInt();
             System.out.print("Month: ");
