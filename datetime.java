@@ -35,11 +35,9 @@ public class datetime {
                                                                                                     // LocalDateTime
                                                                                                     // object named
                                                                                                     // enteredDateAndTime
-                                                                                                    // without time
-                                                                                                    // zone
+                                                                                                    // without time zone
                 DateTimeFormatter era1 = DateTimeFormatter.ofPattern("GGG"); // Format the date and time values with
-                                                                             // specified
-                                                                             // pattern
+                                                                             // specified pattern
                 DateTimeFormatter era2 = DateTimeFormatter.ofPattern("GGGG");
                 DateTimeFormatter era3 = DateTimeFormatter.ofPattern("GGGGG");
                 DateTimeFormatter year1 = DateTimeFormatter.ofPattern("uu");
@@ -95,26 +93,23 @@ public class datetime {
                                                                                                                         // and
                                                                                                                         // time
                                                                                                                         // values
-                System.out.println(
-                                "Era: " + era1.format(enteredDateAndTime) + " (" + era2.format(enteredDateAndTime) + ")"
-                                                + " (" + era3.format(enteredDateAndTime) + ")"); // Print the date and
-                                                                                                 // time values with
-                                                                                                 // formatted date
-                                                                                                 // and time pattern
+                System.out.println("Era: " + era1.format(enteredDateAndTime) + " (" + era2.format(enteredDateAndTime)
+                                + ")" + " (" + era3.format(enteredDateAndTime) + ")"); // Print the date and time values
+                                                                                       // with formatted date and time
+                                                                                       // pattern
                 System.out.println("Year: " + year1.format(enteredDateAndTime) + " (" + year2.format(enteredDateAndTime)
                                 + ")");
-                System.out.println(
-                                "Era Year: " + yearEra.format(enteredDateAndTime) + " ("
-                                                + yearEra2.format(enteredDateAndTime) + ")");
+                System.out.println("Era Year: " + yearEra.format(enteredDateAndTime) + " ("
+                                + yearEra2.format(enteredDateAndTime) + ")");
                 System.out.println("Day of Year: " + dayOfYear.format(enteredDateAndTime));
                 System.out.println("Month of Year: " + monthOfYear.format(enteredDateAndTime) + " ("
                                 + monthOfYear2.format(enteredDateAndTime) + ")" + " ("
-                                + monthOfYear3.format(enteredDateAndTime) + ")"
-                                + " (" + monthOfYear4.format(enteredDateAndTime) + ")");
+                                + monthOfYear3.format(enteredDateAndTime) + ")" + " ("
+                                + monthOfYear4.format(enteredDateAndTime) + ")");
                 System.out.println("Day of Month: " + dayOfMonth.format(enteredDateAndTime));
                 System.out.println("Quarter: " + quarter.format(enteredDateAndTime) + " ("
-                                + quarter2.format(enteredDateAndTime)
-                                + ")" + " (" + quarter3.format(enteredDateAndTime) + ")");
+                                + quarter2.format(enteredDateAndTime) + ")" + " (" + quarter3.format(enteredDateAndTime)
+                                + ")");
                 System.out.println("ISO Week-based Year: " + weekBasedYear.format(enteredDateAndTime) + " ("
                                 + weekBasedYear2.format(enteredDateAndTime) + ")");
                 System.out.println("Week of Year: " + weekOfYear.format(enteredDateAndTime));
@@ -124,8 +119,8 @@ public class datetime {
                                 + dayOfWeek3.format(enteredDateAndTime) + ")");
                 System.out.println("Local Day of Week: " + localDayOfWeek.format(enteredDateAndTime) + " ("
                                 + localDayOfWeek2.format(enteredDateAndTime) + ")" + " ("
-                                + localDayOfWeek3.format(enteredDateAndTime)
-                                + ")" + " (" + localDayOfWeek4.format(enteredDateAndTime) + ")");
+                                + localDayOfWeek3.format(enteredDateAndTime) + ")" + " ("
+                                + localDayOfWeek4.format(enteredDateAndTime) + ")");
                 System.out.println("Local Week of Month: " + localWeekOfMonth.format(enteredDateAndTime));
                 System.out.println("AM/PM: " + amPm.format(enteredDateAndTime));
                 System.out.println("12 Hour Format " + hour12.format(enteredDateAndTime));
@@ -142,35 +137,28 @@ public class datetime {
                 System.out.println("Time Zone: " + timezoneName2.format(enteredDateAndTimeTimezone) + " ("
                                 + timezoneName.format(enteredDateAndTimeTimezone) + ")");
                 System.out.println("Localized Time Zone Offset: " + timezoneOffset.format(enteredDateAndTimeTimezone)
-                                + " ("
-                                + timezoneOffset2.format(enteredDateAndTimeTimezone) + ")");
+                                + " (" + timezoneOffset2.format(enteredDateAndTimeTimezone) + ")");
                 System.out.println("Time Zone Offset: " + timezoneOffsetZ.format(enteredDateAndTimeTimezone) + " ("
                                 + timezoneOffsetX.format(enteredDateAndTimeTimezone) + ")" + " ("
                                 + timezoneOffsetZ1.format(enteredDateAndTimeTimezone) + ")");
 
                 ZonedDateTime dateAndTimeNow = ZonedDateTime.now(); // Get the current date and time based on local
-                                                                    // computer
-                                                                    // date and time with local time zone
-                System.out.println(
-                                "Current Era: " + era1.format(dateAndTimeNow) + " (" + era2.format(dateAndTimeNow) + ")"
-                                                + " (" + era3.format(dateAndTimeNow) + ")"); // Print the formatted date
-                                                                                             // and time values in
-                                                                                             // current
-                                                                                             // local date and time
+                                                                    // computer date and time with local time zone
+                System.out.println("Current Era: " + era1.format(dateAndTimeNow) + " (" + era2.format(dateAndTimeNow)
+                                + ")" + " (" + era3.format(dateAndTimeNow) + ")"); // Print the formatted date and time
+                                                                                   // values in current local date and
+                                                                                   // time
                 System.out.println("Current Year: " + year1.format(dateAndTimeNow) + " (" + year2.format(dateAndTimeNow)
                                 + ")");
-                System.out.println(
-                                "Current Era Year: " + yearEra.format(dateAndTimeNow) + " ("
-                                                + yearEra2.format(dateAndTimeNow) + ")");
+                System.out.println("Current Era Year: " + yearEra.format(dateAndTimeNow) + " ("
+                                + yearEra2.format(dateAndTimeNow) + ")");
                 System.out.println("Current Day of Year: " + dayOfYear.format(dateAndTimeNow));
                 System.out.println("Current Month of Year: " + monthOfYear.format(dateAndTimeNow) + " ("
                                 + monthOfYear2.format(dateAndTimeNow) + ")" + " (" + monthOfYear3.format(dateAndTimeNow)
-                                + ")" + " ("
-                                + monthOfYear4.format(dateAndTimeNow) + ")");
+                                + ")" + " (" + monthOfYear4.format(dateAndTimeNow) + ")");
                 System.out.println("Current Day of Month: " + dayOfMonth.format(dateAndTimeNow));
                 System.out.println("Current Quarter: " + quarter.format(dateAndTimeNow) + " ("
-                                + quarter2.format(dateAndTimeNow)
-                                + ")" + " (" + quarter3.format(dateAndTimeNow) + ")");
+                                + quarter2.format(dateAndTimeNow) + ")" + " (" + quarter3.format(dateAndTimeNow) + ")");
                 System.out.println("Current ISO Week-based Year: " + weekBasedYear.format(dateAndTimeNow) + " ("
                                 + weekBasedYear2.format(dateAndTimeNow) + ")");
                 System.out.println("Current Week of Year: " + weekOfYear.format(dateAndTimeNow));
@@ -180,8 +168,8 @@ public class datetime {
                                 + ")");
                 System.out.println("Current Local Day of Week: " + localDayOfWeek.format(dateAndTimeNow) + " ("
                                 + localDayOfWeek2.format(dateAndTimeNow) + ")" + " ("
-                                + localDayOfWeek3.format(dateAndTimeNow) + ")"
-                                + " (" + localDayOfWeek4.format(dateAndTimeNow) + ")");
+                                + localDayOfWeek3.format(dateAndTimeNow) + ")" + " ("
+                                + localDayOfWeek4.format(dateAndTimeNow) + ")");
                 System.out.println("Current Local Week of Month: " + localWeekOfMonth.format(dateAndTimeNow));
                 System.out.println("Current AM/PM: " + amPm.format(dateAndTimeNow));
                 System.out.println("Current 12 Hour Format " + hour12.format(dateAndTimeNow));
@@ -211,20 +199,28 @@ public class datetime {
                                                                                                                  // LocalDateTime
                                                                                                                  // object
                 System.out.println("Current UTC Era: " + era1.format(utcDateAndTimeNow) + " ("
-                                + era2.format(utcDateAndTimeNow)
-                                + ")" + " (" + era3.format(utcDateAndTimeNow) + ")"); // Print the formatted date and
-                                                                                      // time values in
-                                                                                      // current local date and time
-                System.out.println(
-                                "Current UTC Year: " + year1.format(utcDateAndTimeNow) + " ("
-                                                + year2.format(utcDateAndTimeNow) + ")");
+                                + era2.format(utcDateAndTimeNow) + ")" + " (" + era3.format(utcDateAndTimeNow) + ")"); // Print
+                                                                                                                       // the
+                                                                                                                       // formatted
+                                                                                                                       // date
+                                                                                                                       // and
+                                                                                                                       // time
+                                                                                                                       // values
+                                                                                                                       // in
+                                                                                                                       // current
+                                                                                                                       // local
+                                                                                                                       // date
+                                                                                                                       // and
+                                                                                                                       // time
+                System.out.println("Current UTC Year: " + year1.format(utcDateAndTimeNow) + " ("
+                                + year2.format(utcDateAndTimeNow) + ")");
                 System.out.println("Current UTC Era Year: " + yearEra.format(utcDateAndTimeNow) + " ("
                                 + yearEra2.format(utcDateAndTimeNow) + ")");
                 System.out.println("Current UTC Day of Year: " + dayOfYear.format(utcDateAndTimeNow));
                 System.out.println("Current UTC Month of Year: " + monthOfYear.format(utcDateAndTimeNow) + " ("
                                 + monthOfYear2.format(utcDateAndTimeNow) + ")" + " ("
-                                + monthOfYear3.format(utcDateAndTimeNow) + ")"
-                                + " (" + monthOfYear4.format(utcDateAndTimeNow) + ")");
+                                + monthOfYear3.format(utcDateAndTimeNow) + ")" + " ("
+                                + monthOfYear4.format(utcDateAndTimeNow) + ")");
                 System.out.println("Current UTC Day of Month: " + dayOfMonth.format(utcDateAndTimeNow));
                 System.out.println("Current UTC Quarter: " + quarter.format(utcDateAndTimeNow) + " ("
                                 + quarter2.format(utcDateAndTimeNow) + ")" + " (" + quarter3.format(utcDateAndTimeNow)
@@ -238,8 +234,8 @@ public class datetime {
                                 + dayOfWeek3.format(utcDateAndTimeNow) + ")");
                 System.out.println("Current UTC Local Day of Week: " + localDayOfWeek.format(utcDateAndTimeNow) + " ("
                                 + localDayOfWeek2.format(utcDateAndTimeNow) + ")" + " ("
-                                + localDayOfWeek3.format(utcDateAndTimeNow)
-                                + ")" + " (" + localDayOfWeek4.format(utcDateAndTimeNow) + ")");
+                                + localDayOfWeek3.format(utcDateAndTimeNow) + ")" + " ("
+                                + localDayOfWeek4.format(utcDateAndTimeNow) + ")");
                 System.out.println("Current UTC Local Week of Month: " + localWeekOfMonth.format(utcDateAndTimeNow));
                 System.out.println("Current UTC AM/PM: " + amPm.format(utcDateAndTimeNow));
                 System.out.println("Current UTC 12 Hour Format " + hour12.format(utcDateAndTimeNow));
