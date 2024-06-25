@@ -1,4 +1,7 @@
-# Print the current and entered date and time in all supported formats in Java and ColdFusion
+# Print entered date and time values in all formats using Java, Java Server Pages and ColdFusion
 
-The datetime class will enter the year, month, day of the month, hour, minute, and second, and then print the entered
-date and time, and then it prints the current date and time in Java and ColdFusion.
+Enter the date and time using the form and then press the **Submit** button to see the entered date and time in all supported formats.
+
+## Instructions
+
+Copy this directory to your Java web server root directory, and start the web server for Java Server Pages.
