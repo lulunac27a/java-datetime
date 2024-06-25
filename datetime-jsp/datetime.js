@@ -24,12 +24,12 @@ function setCurrentDate() {
   minute.value = currentMinute;
   second.value = currentSecond;
   millisecond.value = currentMillisecond;
-  microsecond.value = 0; //JavaScript doesn't support Date object with microseconds or nanoseconds, so set them to 0
+  microsecond.value = 0; //JavaScript doesn't support a Date object with microseconds or nanoseconds, so set them to 0
   nanosecond.value = 0;
 }
 
 function setCurrentUtcDate() {
-  const currentDate = new Date(); //set current UTC date and time
+  const currentDate = new Date(); //set the current UTC date and time
   const currentUtcYear = currentDate.getUTCFullYear();
   const currentUtcMonth = currentDate.getUTCMonth() + 1;
   const currentUtcDay = currentDate.getUTCDate();
@@ -51,7 +51,7 @@ function setCurrentUtcDate() {
 function getDaysInMonth() {
   day.max = new Date(year.value, month.value, 0).getDate(); //calculate days in a month in specified month and year
   if (day.value > day.max) {
-    //if day value is more than number of days in a month
+    //if day value is more than the number of days in a month
     day.value = day.max; //set day value to number of days in a month
   }
 }

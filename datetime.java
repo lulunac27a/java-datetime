@@ -12,7 +12,7 @@ public class datetime {
         Scanner sc = new Scanner(System.in); // input the date and time values
         int year, month, day, hour, minute, second, millisecond, microsecond, nanosecond;// initialize date and time
                                                                                          // variables
-        DateTimeFormatter era1 = DateTimeFormatter.ofPattern("GGG"); // Format the date and time values with specified
+        DateTimeFormatter era1 = DateTimeFormatter.ofPattern("GGG"); // Format the date and time values with a specified
                                                                      // pattern
         DateTimeFormatter era2 = DateTimeFormatter.ofPattern("GGGG");
         DateTimeFormatter era3 = DateTimeFormatter.ofPattern("GGGGG");
@@ -84,7 +84,7 @@ public class datetime {
                     .withNano(millisecond * 1000000 + microsecond * 1000 + nanosecond); // Convert datetime of
                                                                                         // GregorianCalendar object to
                                                                                         // LocalDateTime object named
-                                                                                        // enteredDateAndTime without
+                                                                                        // enteredDateAndTime without a
                                                                                         // time zone and set nanoseconds
                                                                                         // to 1,000,000 (1 million) *
                                                                                         // milliseconds + 1,000 (1
@@ -146,7 +146,7 @@ public class datetime {
                     + timezoneOffsetX.format(enteredDateAndTimeTimezone) + ")" + " ("
                     + timezoneOffsetZ1.format(enteredDateAndTimeTimezone) + ")");
             System.out.println("\nCurrent Date and Time Values:\n");
-        } catch (InputMismatchException ex) {// if entered date and time values is in the wrong format (not a valid
+        } catch (InputMismatchException ex) {// if entered, date and time values are in the wrong format (not a valid
                                              // integer)
             System.out.println("\nInvalid date and time input.\nPrinting current date and time.\n");// print the error
         }
@@ -195,9 +195,9 @@ public class datetime {
                 + timezoneOffset2.format(dateAndTimeNow) + ")");
         System.out.println("Current Time Zone Offset: " + timezoneOffsetZ.format(dateAndTimeNow) + " ("
                 + timezoneOffsetX.format(dateAndTimeNow) + ")" + " (" + timezoneOffsetZ1.format(dateAndTimeNow) + ")");
-        Instant currentUtcDateAndTime = Instant.now();// Get the current UTC date and time using Instant object
+        Instant currentUtcDateAndTime = Instant.now();// Get the current UTC date and time using an Instant object
         LocalDateTime utcDateAndTimeNow = LocalDateTime.ofInstant(currentUtcDateAndTime, ZoneOffset.UTC);// Convert from
-                                                                                                         // Instant
+                                                                                                         // an Instant
                                                                                                          // object to
                                                                                                          // LocalDateTime
                                                                                                          // object
