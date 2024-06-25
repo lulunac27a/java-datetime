@@ -18,8 +18,8 @@ public class datetime {
         DateTimeFormatter era3 = DateTimeFormatter.ofPattern("GGGGG");
         DateTimeFormatter year1 = DateTimeFormatter.ofPattern("uu");
         DateTimeFormatter year2 = DateTimeFormatter.ofPattern("uuuu");
-        DateTimeFormatter yearEra = DateTimeFormatter.ofPattern("uu");
-        DateTimeFormatter yearEra2 = DateTimeFormatter.ofPattern("uuuu");
+        DateTimeFormatter yearEra = DateTimeFormatter.ofPattern("yy");
+        DateTimeFormatter yearEra2 = DateTimeFormatter.ofPattern("yyyy");
         DateTimeFormatter dayOfYear = DateTimeFormatter.ofPattern("D");
         DateTimeFormatter monthOfYear = DateTimeFormatter.ofPattern("M");
         DateTimeFormatter monthOfYear2 = DateTimeFormatter.ofPattern("MMM");
