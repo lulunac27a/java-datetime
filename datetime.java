@@ -13,7 +13,7 @@ public class datetime {
         int year, month, day, hour, minute, second, millisecond, microsecond, nanosecond;// initialize date and time
                                                                                          // variables
         DateTimeFormatter era1 = DateTimeFormatter.ofPattern("GGG"); // Format the date and time values with specified
-                                                                             // pattern
+                                                                     // pattern
         DateTimeFormatter era2 = DateTimeFormatter.ofPattern("GGGG");
         DateTimeFormatter era3 = DateTimeFormatter.ofPattern("GGGGG");
         DateTimeFormatter year1 = DateTimeFormatter.ofPattern("uu");
@@ -99,6 +99,8 @@ public class datetime {
                                                                                                                     // and
                                                                                                                     // time
                                                                                                                     // values
+            // Print the entered date and time values in all supported formats
+            System.out.println("\nEntered Date and Time Values:\n");
             System.out.println("Era: " + era1.format(enteredDateAndTime) + " (" + era2.format(enteredDateAndTime) + ")"
                     + " (" + era3.format(enteredDateAndTime) + ")"); // Print the date and time values with formatted
                                                                      // date and time pattern
@@ -143,11 +145,13 @@ public class datetime {
             System.out.println("Time Zone Offset: " + timezoneOffsetZ.format(enteredDateAndTimeTimezone) + " ("
                     + timezoneOffsetX.format(enteredDateAndTimeTimezone) + ")" + " ("
                     + timezoneOffsetZ1.format(enteredDateAndTimeTimezone) + ")");
+            System.out.println("\nCurrent Date and Time Values:\n");
         } catch (InputMismatchException ex) {// if entered date and time values is in the wrong format (not a valid
                                              // integer)
-            System.out.println("Invalid date and time input.\nPrinting current date and time.");// print the error
+            System.out.println("\nInvalid date and time input.\nPrinting current date and time.\n");// print the error
         }
 
+        // Print the current date and timevalues in all supported formats
         ZonedDateTime dateAndTimeNow = ZonedDateTime.now(); // Get the current date and time based on local computer
                                                             // date and time with local time zone
         System.out.println("Current Era: " + era1.format(dateAndTimeNow) + " (" + era2.format(dateAndTimeNow) + ")"
