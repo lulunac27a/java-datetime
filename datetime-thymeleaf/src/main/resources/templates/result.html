@@ -5,6 +5,7 @@
 <body>
   <h1>Output:</h1>
   <div class="container">
+    <h3>Java Date and Time Object:</h3>
     Era:
     <span
       id="output"
@@ -163,6 +164,41 @@
     ><br />
     Nanosecond of Day:
     <span id="output" th:text="${#temporals.format(dateTimeOutput, 'N')}"></span
+    ><br />
+    <h3>Thymeleaf Date and Time Object:</h3>
+    Year: <span id="output" th:text="${#temporals.year(dateTimeOutput)}"></span
+    ><br />
+    Month:
+    <span id="output" th:text="${#temporals.month(dateTimeOutput)}"></span>
+    (<span id="output" th:text="${#temporals.monthName(dateTimeOutput)}"></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.monthNameShort(dateTimeOutput)}"
+    ></span
+    >)<br />
+    Day: <span id="output" th:text="${#temporals.day(dateTimeOutput)}"></span
+    ><br />
+    Day of Week:
+    <span id="output" th:text="${#temporals.dayOfWeek(dateTimeOutput)}"></span>
+    (<span
+      id="output"
+      th:text="${#temporals.dayOfWeekName(dateTimeOutput)}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.dayOfWeekNameShort(dateTimeOutput)}"
+    ></span
+    >)<br />
+    Hour: <span id="output" th:text="${#temporals.hour(dateTimeOutput)}"></span
+    ><br />
+    Minute:
+    <span id="output" th:text="${#temporals.minute(dateTimeOutput)}"></span
+    ><br />
+    Second:
+    <span id="output" th:text="${#temporals.second(dateTimeOutput)}"></span
+    ><br />
+    Nanosecond:
+    <span id="output" th:text="${#temporals.nanosecond(dateTimeOutput)}"></span
     ><br />
   </div>
 </body>
