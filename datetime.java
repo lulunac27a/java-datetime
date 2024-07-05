@@ -154,7 +154,7 @@ public class datetime {
                                                                                                         // error
             }
 
-            // Print the current date and timevalues in all supported formats
+            // Print the current date and time values in all supported formats
             ZonedDateTime dateAndTimeNow = ZonedDateTime.now(); // Get the current date and time based on local computer
                                                                 // date and time with local time zone
             System.out.println("Current Era: " + era1.format(dateAndTimeNow) + " (" + era2.format(dateAndTimeNow) + ")"
