@@ -197,8 +197,26 @@
     Second:
     <span id="output" th:text="${#temporals.second(dateTimeOutput)}"></span
     ><br />
-    Nanosecond:
+    Nanosecond of Second:
     <span id="output" th:text="${#temporals.nanosecond(dateTimeOutput)}"></span
+    ><br />
+    Millisecond:
+    <span
+      id="output"
+      th:text="${#numbers.formatInteger(T(java.lang.Math).floor((#temporals.nanosecond(dateTimeOutput) / 1000000) % 1000), 1)}"
+    ></span
+    ><br />
+    Microsecond:
+    <span
+      id="output"
+      th:text="${#numbers.formatInteger(T(java.lang.Math).floor((#temporals.nanosecond(dateTimeOutput) / 1000) % 1000), 1)}"
+    ></span
+    ><br />
+    Nanosecond:
+    <span
+      id="output"
+      th:text="${#temporals.nanosecond(dateTimeOutput) % 1000}"
+    ></span
     ><br />
   </div>
 </body>
