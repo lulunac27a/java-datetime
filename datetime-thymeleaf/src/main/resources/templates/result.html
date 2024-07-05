@@ -1,33 +1,168 @@
-<!DOCTYPE html>
+<!doctype html>
 <head>
-    <title>Entered Date and Time Output</title>
+  <title>Entered Date and Time Output</title>
 </head>
 <body>
-    <h1>Output:</h1>
-    <div class="container">
-    Era: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'GGG')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'GGGG')}"></span>) (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'GGGGG')}"></span>)<br>
-    Year: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'uu')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'uuuu')}"></span>)<br>
-    Era Year: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'yy')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'yyyy')}"></span>)<br>
-    Day of Year: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'D')}"></span><br>
-    Month of Year: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'M')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'MMM')}"></span>) (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'MMMM')}"></span>) (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'MMMMM')}"></span>)<br>
-    Day of Month: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'd')}"></span><br>
-    Quarter: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'q')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'qqq')}"></span>) (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'qqqq')}"></span>)<br>
-    ISO Week-based Year: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'YY')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'YYYY')}"></span>)<br>
-    Week of Year: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'w')}"></span><br>
-    Week of Month: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'W')}"></span><br>
-    Day of Week: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'E')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'EEEE')}"></span>) (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'EEEEE')}"></span>)<br>
-    Local Day of Week: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'e')}"></span> (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'eee')}"></span>) (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'eeee')}"></span>) (<span id="output" th:text="${#temporals.format(dateTimeOutput, 'eeeee')}"></span>)<br>
-    Local Week of Month: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'F')}"></span><br>
-    AM/PM: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'a')}"></span><br>
-    12 Hour Format: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'h')}"></span><br>
-    0-11 Hour Format: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'K')}"></span><br>
-    24 Hour Format: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'k')}"></span><br>
-    Hour of Day: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'H')}"></span><br>
-    Minute: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'm')}"></span><br>
-    Second: <span id="output" th:text="${#temporals.format(dateTimeOutput, 's')}"></span><br>
-    Fraction of Second: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'SSSSSSSSS')}"></span><br>
-    Millisecond of Day: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'A')}"></span><br>
-    Nanosecond: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'n')}"></span><br>
-    Nanosecond of Day: <span id="output" th:text="${#temporals.format(dateTimeOutput, 'N')}"></span><br>
-    </div>
+  <h1>Output:</h1>
+  <div class="container">
+    Era:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'GGG')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'GGGG')}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'GGGGG')}"
+    ></span
+    >)<br />
+    Year:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'uu')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'uuuu')}"
+    ></span
+    >)<br />
+    Era Year:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'yy')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'yyyy')}"
+    ></span
+    >)<br />
+    Day of Year:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'D')}"></span
+    ><br />
+    Month of Year:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'M')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'MMM')}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'MMMM')}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'MMMMM')}"
+    ></span
+    >)<br />
+    Day of Month:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'd')}"></span
+    ><br />
+    Quarter:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'q')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'qqq')}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'qqqq')}"
+    ></span
+    >)<br />
+    ISO Week-based Year:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'YY')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'YYYY')}"
+    ></span
+    >)<br />
+    Week of Year:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'w')}"></span
+    ><br />
+    Week of Month:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'W')}"></span
+    ><br />
+    Day of Week:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'E')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'EEEE')}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'EEEEE')}"
+    ></span
+    >)<br />
+    Local Day of Week:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'e')}"
+    ></span>
+    (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'eee')}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'eeee')}"
+    ></span
+    >) (<span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'eeeee')}"
+    ></span
+    >)<br />
+    Local Week of Month:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'F')}"></span
+    ><br />
+    AM/PM:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'a')}"></span
+    ><br />
+    12 Hour Format:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'h')}"></span
+    ><br />
+    0-11 Hour Format:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'K')}"></span
+    ><br />
+    24 Hour Format:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'k')}"></span
+    ><br />
+    Hour of Day:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'H')}"></span
+    ><br />
+    Minute:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'm')}"></span
+    ><br />
+    Second:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 's')}"></span
+    ><br />
+    Fraction of Second:
+    <span
+      id="output"
+      th:text="${#temporals.format(dateTimeOutput, 'SSSSSSSSS')}"
+    ></span
+    ><br />
+    Millisecond of Day:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'A')}"></span
+    ><br />
+    Nanosecond:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'n')}"></span
+    ><br />
+    Nanosecond of Day:
+    <span id="output" th:text="${#temporals.format(dateTimeOutput, 'N')}"></span
+    ><br />
+  </div>
 </body>

@@ -23,7 +23,9 @@ public class DateTimeController {
     @PostMapping("submit-form")
     public String formatDateTime(@ModelAttribute("enteredDateTime") DateTime dateTime, Model model) {
         model.addAttribute("enteredDateTime", dateTime);
-        LocalDateTime enteredDateTime = LocalDateTime.of(dateTime.getYear(), dateTime.getMonth(), dateTime.getDay(), dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond(), dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());
+        LocalDateTime enteredDateTime = LocalDateTime.of(dateTime.getYear(), dateTime.getMonth(), dateTime.getDay(),
+                dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond(),
+                dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());
         model.addAttribute("enteredDateTime", dateTime);
         model.addAttribute("dateTimeOutput", enteredDateTime);
         return "result";
