@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Print Date and Time in All Supported Formats using Thymeleaf</title>
+</head>
+<body>
+    <h1>Print Date and Time in All Supported Formats using Thymeleaf</h1>
+    <div class="container">
+        <form method="post" th:action="@{/submit-form}" th:object="${enteredDateTime}">
+            Year: <input type="number" id="year" th:field="*{year}"><br>
+            Month: <input type="number" id="month" th:field="*{month}"><br>
+            Day: <input type="number" id="day" th:field="*{day}"><br>
+            Hour: <input type="number" id="hour" th:field="*{hour}"><br>
+            Minute: <input type="number" id="minute" th:field="*{minute}"><br>
+            Second: <input type="number" id="second" th:field="*{second}"><br>
+            Millisecond: <input type="number" id="millisecond" th:field="*{millisecond}"><br>
+            Microsecond: <input type="number" id="microsecond" th:field="*{microsecond}"><br>
+            Nanosecond: <input type="number" id="nanosecond" th:field="*{nanosecond}"><br>
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+</body>
