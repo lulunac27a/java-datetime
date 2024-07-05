@@ -17,6 +17,20 @@ public class DateTimeController {
     public String dateTimeForm(Model model) {
         DateTime dateTime = new DateTime();
         model.addAttribute("enteredDateTime", dateTime);
+        LocalDateTime currentDateTime = LocalDateTime.now();
+        dateTime.setYear(currentDateTime.getYear());
+        dateTime.setMonth(currentDateTime.getMonthValue());
+        dateTime.setDay(currentDateTime.getDayOfMonth());
+        dateTime.setHour(currentDateTime.getHour());
+        dateTime.setMinute(currentDateTime.getMinute());
+        dateTime.setSecond(currentDateTime.getSecond());
+        dateTime.setMillisecond((currentDateTime.getNano() / 1000000) % 1000);
+        dateTime.setMicrosecond((currentDateTime.getNano() / 1000) % 1000);
+        dateTime.setNanosecond(currentDateTime.getNano() % 1000);
+        LocalDateTime dateTimeValues = LocalDateTime.of(dateTime.getYear(), dateTime.getMonth(), dateTime.getDay(),
+                dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond(),
+                dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());
+        model.addAttribute("currentDateTime", dateTimeValues);
         return "index";
     }
 
