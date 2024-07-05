@@ -9,7 +9,9 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import com.example.lulunac27a.datetimethymeleaf.entity.DateTime;
 
+import java.time.Instant;
 import java.time.LocalDateTime;
+import java.time.ZoneId;
 
 @Controller
 public class DateTimeController {
@@ -31,6 +33,23 @@ public class DateTimeController {
                 dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond(),
                 dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());
         model.addAttribute("currentDateTime", dateTimeValues);
+        Instant currentUtcDateTime = Instant.now();
+        LocalDateTime currentUtcDateTimeNow = LocalDateTime.ofInstant(currentUtcDateTime, ZoneId.of("UTC"));
+        DateTime utcDateTimeValues = new DateTime();
+        utcDateTimeValues.setYear(currentUtcDateTimeNow.getYear());
+        utcDateTimeValues.setMonth(currentUtcDateTimeNow.getMonthValue());
+        utcDateTimeValues.setDay(currentUtcDateTimeNow.getDayOfMonth());
+        utcDateTimeValues.setHour(currentUtcDateTimeNow.getHour());
+        utcDateTimeValues.setMinute(currentUtcDateTimeNow.getMinute());
+        utcDateTimeValues.setSecond(currentUtcDateTimeNow.getSecond());
+        utcDateTimeValues.setMillisecond((currentUtcDateTimeNow.getNano() / 1000000) % 1000);
+        utcDateTimeValues.setMicrosecond((currentUtcDateTimeNow.getNano() / 1000) % 1000);
+        utcDateTimeValues.setNanosecond(currentUtcDateTimeNow.getNano() % 1000);
+        LocalDateTime utcDateTimeValuesNow = LocalDateTime.of(utcDateTimeValues.getYear(), utcDateTimeValues.getMonth(),
+                utcDateTimeValues.getDay(), utcDateTimeValues.getHour(), utcDateTimeValues.getMinute(),
+                utcDateTimeValues.getSecond(), utcDateTimeValues.getMillisecond() * 1000000
+                        + utcDateTimeValues.getMicrosecond() * 1000 + utcDateTimeValues.getNanosecond());
+        model.addAttribute("currentUtcDateTime", utcDateTimeValuesNow);
         return "index";
     }
 
