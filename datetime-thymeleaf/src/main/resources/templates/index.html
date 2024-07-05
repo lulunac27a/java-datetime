@@ -10,18 +10,36 @@
       th:action="@{/submit-form}"
       th:object="${enteredDateTime}"
     >
-      Year: <input type="number" id="year" th:field="*{year}" /><br />
-      Month: <input type="number" id="month" th:field="*{month}" /><br />
-      Day: <input type="number" id="day" th:field="*{day}" /><br />
-      Hour: <input type="number" id="hour" th:field="*{hour}" /><br />
-      Minute: <input type="number" id="minute" th:field="*{minute}" /><br />
-      Second: <input type="number" id="second" th:field="*{second}" /><br />
+      Year: <input type="number" id="year" th:field="*{year}" required /><br />
+      Month:
+      <input type="number" id="month" th:field="*{month}" required /><br />
+      Day: <input type="number" id="day" th:field="*{day}" required /><br />
+      Hour: <input type="number" id="hour" th:field="*{hour}" required /><br />
+      Minute:
+      <input type="number" id="minute" th:field="*{minute}" required /><br />
+      Second:
+      <input type="number" id="second" th:field="*{second}" required /><br />
       Millisecond:
-      <input type="number" id="millisecond" th:field="*{millisecond}" /><br />
+      <input
+        type="number"
+        id="millisecond"
+        th:field="*{millisecond}"
+        required
+      /><br />
       Microsecond:
-      <input type="number" id="microsecond" th:field="*{microsecond}" /><br />
+      <input
+        type="number"
+        id="microsecond"
+        th:field="*{microsecond}"
+        required
+      /><br />
       Nanosecond:
-      <input type="number" id="nanosecond" th:field="*{nanosecond}" /><br />
+      <input
+        type="number"
+        id="nanosecond"
+        th:field="*{nanosecond}"
+        required
+      /><br />
       <button type="submit">Submit</button>
     </form>
   </div>
