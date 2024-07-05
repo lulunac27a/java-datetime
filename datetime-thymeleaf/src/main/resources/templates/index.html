@@ -12,19 +12,64 @@
     >
       Year: <input type="number" id="year" th:field="*{year}" required /><br />
       Month:
-      <input type="number" id="month" th:field="*{month}" required /><br />
-      Day: <input type="number" id="day" th:field="*{day}" required /><br />
-      Hour: <input type="number" id="hour" th:field="*{hour}" required /><br />
+      <input
+        type="number"
+        id="month"
+        th:field="*{month}"
+        required
+        min="1"
+        max="12"
+        step="1"
+      /><br />
+      Day:
+      <input
+        type="number"
+        id="day"
+        th:field="*{day}"
+        required
+        min="1"
+        max="31"
+        step="1"
+      /><br />
+      Hour:
+      <input
+        type="number"
+        id="hour"
+        th:field="*{hour}"
+        required
+        min="0"
+        max="23"
+        step="1"
+      /><br />
       Minute:
-      <input type="number" id="minute" th:field="*{minute}" required /><br />
+      <input
+        type="number"
+        id="minute"
+        th:field="*{minute}"
+        required
+        min="0"
+        max="59"
+        step="1"
+      /><br />
       Second:
-      <input type="number" id="second" th:field="*{second}" required /><br />
+      <input
+        type="number"
+        id="second"
+        th:field="*{second}"
+        required
+        min="0"
+        max="59"
+        step="1"
+      /><br />
       Millisecond:
       <input
         type="number"
         id="millisecond"
         th:field="*{millisecond}"
         required
+        min="0"
+        max="999"
+        step="1"
       /><br />
       Microsecond:
       <input
@@ -32,6 +77,9 @@
         id="microsecond"
         th:field="*{microsecond}"
         required
+        min="0"
+        max="999"
+        step="1"
       /><br />
       Nanosecond:
       <input
@@ -39,6 +87,9 @@
         id="nanosecond"
         th:field="*{nanosecond}"
         required
+        min="0"
+        max="999"
+        step="1"
       /><br />
       <button type="submit">Submit</button>
     </form>
