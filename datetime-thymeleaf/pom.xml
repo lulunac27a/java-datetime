@@ -14,7 +14,7 @@
 	<groupId>com.example</groupId>
 	<artifactId>lulunac27a</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>java-datetime-thymeleft</name>
+	<name>java-datetime-thymeleaf</name>
 	<description
   >Print date and time in all supported formats using Thymeleaf</description>
 	<url />
