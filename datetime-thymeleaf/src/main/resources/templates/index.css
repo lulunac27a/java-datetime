@@ -1,0 +1,6 @@
+* {
+  font-family: system-ui; /*use system based font*/
+}
+#output {
+  font-weight: bold; /*bold the date and time output values*/
+}
