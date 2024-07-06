@@ -10,6 +10,7 @@ Enter date and time values
 </head>
 <body>
 <cfset dateAndTimeNow = now()><!---set input form values to current date and time--->
+<cfset dateAndTimeNowUtc = dateConvert("local2Utc", dateAndTimeNow)>
 <cfform method = "post"><!---send post request when form is submitted--->
     Year: 
     <cfinput type = "text" id = "year" name = "year" value = "#Year(dateAndTimeNow)#"
@@ -246,6 +247,108 @@ Enter date and time values
     <cfoutput>
         Current ISO Format: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "iso")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Day of Month: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "d")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Day of Week: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "EEE")# (#dateTimeFormat(dateAndTimeNowUtc, "EEEE")#
+        )
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Month: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "m")# (#dateTimeFormat(dateAndTimeNowUtc, "mmm")#
+        ) (#dateTimeFormat(dateAndTimeNowUtc, "mmmm")#) (#dateTimeFormat(dateAndTimeNowUtc, "M")#)
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Day of Year: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "D")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Year: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "yyyy")# (#dateTimeFormat(dateAndTimeNowUtc, "yy")#
+        )
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Week Year: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "YYYY")# (#dateTimeFormat(dateAndTimeNowUtc, "Y")#
+        )
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Period/Era: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "G")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC 12 Hour Format: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "h")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC 24 Hour Format: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "H")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Minute: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "n")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Second: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "s")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Milliseconds: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "l")# (#dateTimeFormat(dateAndTimeNowUtc, "L")#
+        )
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Time Marker String: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "t")# (#dateTimeFormat(dateAndTimeNowUtc, "tt")#
+        )
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Week of Year: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "w")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC Week of Month: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "W")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current UTC ISO Format: 
+        <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "iso")#
         </span>
     </cfoutput>
     <br>
