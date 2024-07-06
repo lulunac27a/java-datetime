@@ -250,6 +250,7 @@ Enter date and time values
         </span>
     </cfoutput>
     <br>
+    <!---output the current UTC date and time in all supported formats--->
     <cfoutput>
         Current UTC Day of Month: 
         <span id = "output">#dateTimeFormat(dateAndTimeNowUtc, "d")#
