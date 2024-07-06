@@ -1,6 +1,6 @@
 package com.example.lulunac27a.datetimethymeleaf.entity;
 
-public class DateTime {
+public class DateTime {// class with date and time information
     private int year;
     private int month;
     private int day;

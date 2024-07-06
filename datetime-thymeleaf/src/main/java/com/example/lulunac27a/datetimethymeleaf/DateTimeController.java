@@ -15,11 +15,11 @@ import java.time.ZoneId;
 
 @Controller
 public class DateTimeController {
-    @GetMapping("/")
+    @GetMapping("/") // get request from home page
     public String dateTimeForm(Model model) {
-        DateTime dateTime = new DateTime();
+        DateTime dateTime = new DateTime();// create date and time object
         model.addAttribute("enteredDateTime", dateTime);
-        LocalDateTime currentDateTime = LocalDateTime.now();
+        LocalDateTime currentDateTime = LocalDateTime.now();// set current date and time to now
         dateTime.setYear(currentDateTime.getYear());
         dateTime.setMonth(currentDateTime.getMonthValue());
         dateTime.setDay(currentDateTime.getDayOfMonth());
@@ -31,10 +31,18 @@ public class DateTimeController {
         dateTime.setNanosecond(currentDateTime.getNano() % 1000);
         LocalDateTime dateTimeValues = LocalDateTime.of(dateTime.getYear(), dateTime.getMonth(), dateTime.getDay(),
                 dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond(),
-                dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());
+                dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());// set
+                                                                                                                   // date
+                                                                                                                   // and
+                                                                                                                   // time
+                                                                                                                   // values
         model.addAttribute("currentDateTime", dateTimeValues);
         Instant currentUtcDateTime = Instant.now();
-        LocalDateTime currentUtcDateTimeNow = LocalDateTime.ofInstant(currentUtcDateTime, ZoneId.of("UTC"));
+        LocalDateTime currentUtcDateTimeNow = LocalDateTime.ofInstant(currentUtcDateTime, ZoneId.of("UTC"));// set
+                                                                                                            // current
+                                                                                                            // UTC date
+                                                                                                            // and time
+                                                                                                            // to now
         DateTime utcDateTimeValues = new DateTime();
         utcDateTimeValues.setYear(currentUtcDateTimeNow.getYear());
         utcDateTimeValues.setMonth(currentUtcDateTimeNow.getMonthValue());
@@ -50,22 +58,33 @@ public class DateTimeController {
                 utcDateTimeValues.getSecond(), utcDateTimeValues.getMillisecond() * 1000000
                         + utcDateTimeValues.getMicrosecond() * 1000 + utcDateTimeValues.getNanosecond());
         model.addAttribute("currentUtcDateTime", utcDateTimeValuesNow);
-        return "index";
+        return "index";// return index page
     }
 
-    @PostMapping("submit-form")
-    public String formatDateTime(@ModelAttribute("enteredDateTime") DateTime dateTime, Model model) {
+    @PostMapping("submit-form") // POST request from submiting the form
+    public String formatDateTime(@ModelAttribute("enteredDateTime") DateTime dateTime, Model model) {// format date and
+                                                                                                     // time using date
+                                                                                                     // and time format
+                                                                                                     // patterns
         model.addAttribute("enteredDateTime", dateTime);
         LocalDateTime enteredDateTime = LocalDateTime.of(dateTime.getYear(), dateTime.getMonth(), dateTime.getDay(),
                 dateTime.getHour(), dateTime.getMinute(), dateTime.getSecond(),
-                dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());
-        model.addAttribute("enteredDateTime", dateTime);
-        model.addAttribute("dateTimeOutput", enteredDateTime);
-        return "result";
+                dateTime.getMillisecond() * 1000000 + dateTime.getMicrosecond() * 1000 + dateTime.getNanosecond());// set
+                                                                                                                   // entered
+                                                                                                                   // date
+                                                                                                                   // and
+                                                                                                                   // time
+                                                                                                                   // to
+                                                                                                                   // form
+                                                                                                                   // request
+                                                                                                                   // values
+        model.addAttribute("dateTimeOutput", enteredDateTime);// add entered date and time values needed to print
+                                                              // formatted date and time values
+        return "result";// return result page
     }
 
-    @RequestMapping("/")
-    public String showHomePage() {
-        return "index";
+    @RequestMapping("/") // show index page when request is made from home page
+    public String showHomePage() {// show home page
+        return "index";// return index page
     }
 }
