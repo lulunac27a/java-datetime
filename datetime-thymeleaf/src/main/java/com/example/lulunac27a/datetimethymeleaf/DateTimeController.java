@@ -17,9 +17,9 @@ import java.time.ZoneId;
 public class DateTimeController {
     @GetMapping("/") // get request from home page
     public String dateTimeForm(Model model) {
-        DateTime dateTime = new DateTime();// create date and time object
+        DateTime dateTime = new DateTime();// create the date and time object
         model.addAttribute("enteredDateTime", dateTime);
-        LocalDateTime currentDateTime = LocalDateTime.now();// set current date and time to now
+        LocalDateTime currentDateTime = LocalDateTime.now();// set the current date and time to now
         dateTime.setYear(currentDateTime.getYear());
         dateTime.setMonth(currentDateTime.getMonthValue());
         dateTime.setDay(currentDateTime.getDayOfMonth());
@@ -38,7 +38,7 @@ public class DateTimeController {
                                                                                                                    // values
         model.addAttribute("currentDateTime", dateTimeValues);
         Instant currentUtcDateTime = Instant.now();
-        LocalDateTime currentUtcDateTimeNow = LocalDateTime.ofInstant(currentUtcDateTime, ZoneId.of("UTC"));// set
+        LocalDateTime currentUtcDateTimeNow = LocalDateTime.ofInstant(currentUtcDateTime, ZoneId.of("UTC"));// set the
                                                                                                             // current
                                                                                                             // UTC date
                                                                                                             // and time
@@ -61,7 +61,7 @@ public class DateTimeController {
         return "index";// return index page
     }
 
-    @PostMapping("submit-form") // POST request from submiting the form
+    @PostMapping("submit-form") // POST request from submitting the form
     public String formatDateTime(@ModelAttribute("enteredDateTime") DateTime dateTime, Model model) {// format date and
                                                                                                      // time using date
                                                                                                      // and time format
