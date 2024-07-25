@@ -11,6 +11,7 @@ Enter date and time values
 <body>
 <cfset dateAndTimeNow = now()><!---set input form values to current date and time--->
 <cfset dateAndTimeNowUtc = dateConvert("local2Utc", dateAndTimeNow)>
+<cfset currentTimeZone = GetTimeZoneInfo()><!---get current time zone--->
 <cfform method = "post"><!---send post request when form is submitted--->
     Year: 
     <cfinput type = "text" id = "year" name = "year" value = "#Year(dateAndTimeNow)#"
@@ -247,6 +248,30 @@ Enter date and time values
     <cfoutput>
         Current ISO Format: 
         <span id = "output">#dateTimeFormat(dateAndTimeNow, "iso")#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current Time Offset in Seconds from UTC: 
+        <span id = "output">#currentTimeZone.utcTotalOffset#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current Time Offset in Hours: 
+        <span id = "output">#currentTimeZone.utcHourOffset#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current Time Offset in Minutes: 
+        <span id = "output">#currentTimeZone.utcMinuteOffset#
+        </span>
+    </cfoutput>
+    <br>
+    <cfoutput>
+        Current DST Value: 
+        <span id = "output">#currentTimeZone.isDSTOn#
         </span>
     </cfoutput>
     <br>
