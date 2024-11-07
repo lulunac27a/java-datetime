@@ -1,7 +1,8 @@
 package com.example.lulunac27a.datetimethymeleaf.entity;
 
-public class DateTime {// class with date and time information with milliseconds, microseconds and
-                       // nanoseconds
+public class DateTime { // class with date and time information with milliseconds, microseconds and
+                        // nanoseconds
+
     private int year;
     private int month;
     private int day;
@@ -84,5 +85,4 @@ public class DateTime {// class with date and time information with milliseconds
     public void setNanosecond(int nanosecond) {
         this.nanosecond = nanosecond;
     }
-
 }
