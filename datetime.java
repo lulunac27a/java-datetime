@@ -63,7 +63,7 @@ public class datetime {
             DateTimeFormatter timezoneOffset2 = DateTimeFormatter.ofPattern("ZZZZZ");
             DateTimeFormatter timezoneOffsetZ1 = DateTimeFormatter.ofPattern("ZZZZ");
 
-            try { // make sure date and time input is a vaild integer
+            try { // make sure date and time input is a valid integer
                 System.out.print("Year: ");
                 year = sc.nextInt();
                 System.out.print("Month: ");
@@ -439,11 +439,11 @@ public class datetime {
             System.out.println(
                     "Current UTC AM/PM: " + amPm.format(utcDateAndTimeNow));
             System.out.println(
-                    "Current UTC 12 Hour Format " + hour12.format(utcDateAndTimeNow));
+                    "Current UTC 12-Hour Format " + hour12.format(utcDateAndTimeNow));
             System.out.println(
                     "Current UTC 0-11 Hour Format: " + hour0To11.format(utcDateAndTimeNow));
             System.out.println(
-                    "Current UTC 24 Hour Format: " + hour24.format(utcDateAndTimeNow));
+                    "Current UTC 24-Hour Format: " + hour24.format(utcDateAndTimeNow));
             System.out.println(
                     "Current UTC Hour of Day: " + hourOfDay.format(utcDateAndTimeNow));
             System.out.println(
