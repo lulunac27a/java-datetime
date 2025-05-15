@@ -135,7 +135,7 @@ public class datetime {
                                 monthOfYear4.format(enteredDateAndTime) +
                                 ")");
                 System.out.println(
-                        "Day of Month: " + dayOfMonth.format(enteredDateAndTime));
+                        "Day of the Month: " + dayOfMonth.format(enteredDateAndTime));
                 System.out.println(
                         "Quarter: " +
                                 quarter.format(enteredDateAndTime) +
@@ -156,7 +156,7 @@ public class datetime {
                 System.out.println(
                         "Week of Month: " + weekOfMonth.format(enteredDateAndTime));
                 System.out.println(
-                        "Day of Week: " +
+                        "Day of the Week: " +
                                 dayOfWeek.format(enteredDateAndTime) +
                                 " (" +
                                 dayOfWeek2.format(enteredDateAndTime) +
@@ -165,7 +165,7 @@ public class datetime {
                                 dayOfWeek3.format(enteredDateAndTime) +
                                 ")");
                 System.out.println(
-                        "Local Day of Week: " +
+                        "Local Day of the Week: " +
                                 localDayOfWeek.format(enteredDateAndTime) +
                                 " (" +
                                 localDayOfWeek2.format(enteredDateAndTime) +
@@ -180,11 +180,11 @@ public class datetime {
                         "Local Week of Month: " + localWeekOfMonth.format(enteredDateAndTime));
                 System.out.println("AM/PM: " + amPm.format(enteredDateAndTime));
                 System.out.println(
-                        "12 Hour Format " + hour12.format(enteredDateAndTime));
+                        "12-Hour Format " + hour12.format(enteredDateAndTime));
                 System.out.println(
-                        "0-11 Hour Format: " + hour0To11.format(enteredDateAndTime));
+                        "0-11-Hour Format: " + hour0To11.format(enteredDateAndTime));
                 System.out.println(
-                        "24 Hour Format: " + hour24.format(enteredDateAndTime));
+                        "24-Hour Format: " + hour24.format(enteredDateAndTime));
                 System.out.println(
                         "Hour of Day: " + hourOfDay.format(enteredDateAndTime));
                 System.out.println("Minute: " + minute1.format(enteredDateAndTime));
@@ -266,7 +266,7 @@ public class datetime {
                             monthOfYear4.format(dateAndTimeNow) +
                             ")");
             System.out.println(
-                    "Current Day of Month: " + dayOfMonth.format(dateAndTimeNow));
+                    "Current Day of the Month: " + dayOfMonth.format(dateAndTimeNow));
             System.out.println(
                     "Current Quarter: " +
                             quarter.format(dateAndTimeNow) +
@@ -287,7 +287,7 @@ public class datetime {
             System.out.println(
                     "Current Week of Month: " + weekOfMonth.format(dateAndTimeNow));
             System.out.println(
-                    "Current Day of Week: " +
+                    "Current Day of the Week: " +
                             dayOfWeek.format(dateAndTimeNow) +
                             " (" +
                             dayOfWeek2.format(dateAndTimeNow) +
@@ -296,7 +296,7 @@ public class datetime {
                             dayOfWeek3.format(dateAndTimeNow) +
                             ")");
             System.out.println(
-                    "Current Local Day of Week: " +
+                    "Current Local Day of the Week: " +
                             localDayOfWeek.format(dateAndTimeNow) +
                             " (" +
                             localDayOfWeek2.format(dateAndTimeNow) +
@@ -312,11 +312,11 @@ public class datetime {
                             localWeekOfMonth.format(dateAndTimeNow));
             System.out.println("Current AM/PM: " + amPm.format(dateAndTimeNow));
             System.out.println(
-                    "Current 12 Hour Format " + hour12.format(dateAndTimeNow));
+                    "Current 12-Hour Format " + hour12.format(dateAndTimeNow));
             System.out.println(
                     "Current 0-11 Hour Format: " + hour0To11.format(dateAndTimeNow));
             System.out.println(
-                    "Current 24 Hour Format: " + hour24.format(dateAndTimeNow));
+                    "Current 24-Hour Format: " + hour24.format(dateAndTimeNow));
             System.out.println(
                     "Current Hour of Day: " + hourOfDay.format(dateAndTimeNow));
             System.out.println("Current Minute: " + minute1.format(dateAndTimeNow));
@@ -422,7 +422,7 @@ public class datetime {
                             dayOfWeek3.format(utcDateAndTimeNow) +
                             ")");
             System.out.println(
-                    "Current UTC Local Day of Week: " +
+                    "Current UTC Local Day of the Week: " +
                             localDayOfWeek.format(utcDateAndTimeNow) +
                             " (" +
                             localDayOfWeek2.format(utcDateAndTimeNow) +

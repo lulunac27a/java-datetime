@@ -92,8 +92,8 @@ object datetime {
                                         millisecond * 1000000 + microsecond * 1000 + nanosecond
                                 ) // Convert datetime of GregorianCalendar object to LocalDateTime
                 // object named enteredDateAndTime without a time zone and set
-                // nanoseconds to 1,000,000 (1 million) * milliseconds + 1,000 (1
-                // thousand) * microseconds + nanoseconds
+                // nanoseconds to 1,000,000 (1 million) * milliseconds + 1,000
+                // (1 thousand) * microseconds + nanoseconds
                 val enteredDateAndTimeTimezone =
                         ZonedDateTime.of(
                                 enteredDateAndTime,
@@ -139,7 +139,7 @@ object datetime {
                                 monthOfYear4.format(enteredDateAndTime) +
                                 ")"
                 )
-                println("Day of Month: " + dayOfMonth.format(enteredDateAndTime))
+                println("Day of the Month: " + dayOfMonth.format(enteredDateAndTime))
                 println(
                         "Quarter: " +
                                 quarter.format(enteredDateAndTime) +
@@ -160,7 +160,7 @@ object datetime {
                 println("Week of Year: " + weekOfYear.format(enteredDateAndTime))
                 println("Week of Month: " + weekOfMonth.format(enteredDateAndTime))
                 println(
-                        "Day of Week: " +
+                        "Day of the Week: " +
                                 dayOfWeek.format(enteredDateAndTime) +
                                 " (" +
                                 dayOfWeek2.format(enteredDateAndTime) +
@@ -170,7 +170,7 @@ object datetime {
                                 ")"
                 )
                 println(
-                        "Local Day of Week: " +
+                        "Local Day of the Week: " +
                                 localDayOfWeek.format(enteredDateAndTime) +
                                 " (" +
                                 localDayOfWeek2.format(enteredDateAndTime) +
@@ -184,9 +184,9 @@ object datetime {
                 )
                 println("Local Week of Month: " + localWeekOfMonth.format(enteredDateAndTime))
                 println("AM/PM: " + amPm.format(enteredDateAndTime))
-                println("12 Hour Format " + hour12.format(enteredDateAndTime))
-                println("0-11 Hour Format: " + hour0To11.format(enteredDateAndTime))
-                println("24 Hour Format: " + hour24.format(enteredDateAndTime))
+                println("12-Hour Format " + hour12.format(enteredDateAndTime))
+                println("0-11-Hour Format: " + hour0To11.format(enteredDateAndTime))
+                println("24-Hour Format: " + hour24.format(enteredDateAndTime))
                 println("Hour of Day: " + hourOfDay.format(enteredDateAndTime))
                 println("Minute: " + minute1.format(enteredDateAndTime))
                 println("Second: " + second1.format(enteredDateAndTime))
@@ -221,7 +221,8 @@ object datetime {
                 )
                 println("\nCurrent Date and Time Values:\n")
             } catch (ex: InputMismatchException) { // if entered, date and time values are in the
-                // wrong format (not a valid integer)
+                // wrong format
+                // (not a valid integer)
                 println(
                         "\nInvalid date and time input.\nPrinting current date and time.\n"
                 ) // print the error
@@ -231,7 +232,8 @@ object datetime {
             val dateAndTimeNow =
                     ZonedDateTime
                             .now() // Get the current date and time based on local computer date and
-            // time with local time zone
+            // time with
+            // local time zone
             println(
                     "Current Era: " +
                             era1.format(dateAndTimeNow) +
@@ -270,7 +272,7 @@ object datetime {
                             monthOfYear4.format(dateAndTimeNow) +
                             ")"
             )
-            println("Current Day of Month: " + dayOfMonth.format(dateAndTimeNow))
+            println("Current Day of the Month: " + dayOfMonth.format(dateAndTimeNow))
             println(
                     "Current Quarter: " +
                             quarter.format(dateAndTimeNow) +
@@ -291,7 +293,7 @@ object datetime {
             println("Current Week of Year: " + weekOfYear.format(dateAndTimeNow))
             println("Current Week of Month: " + weekOfMonth.format(dateAndTimeNow))
             println(
-                    "Current Day of Week: " +
+                    "Current Day of the Week: " +
                             dayOfWeek.format(dateAndTimeNow) +
                             " (" +
                             dayOfWeek2.format(dateAndTimeNow) +
@@ -301,7 +303,7 @@ object datetime {
                             ")"
             )
             println(
-                    "Current Local Day of Week: " +
+                    "Current Local Day of the Week: " +
                             localDayOfWeek.format(dateAndTimeNow) +
                             " (" +
                             localDayOfWeek2.format(dateAndTimeNow) +
@@ -315,9 +317,9 @@ object datetime {
             )
             println("Current Local Week of Month: " + localWeekOfMonth.format(dateAndTimeNow))
             println("Current AM/PM: " + amPm.format(dateAndTimeNow))
-            println("Current 12 Hour Format " + hour12.format(dateAndTimeNow))
+            println("Current 12-Hour Format " + hour12.format(dateAndTimeNow))
             println("Current 0-11 Hour Format: " + hour0To11.format(dateAndTimeNow))
-            println("Current 24 Hour Format: " + hour24.format(dateAndTimeNow))
+            println("Current 24-Hour Format: " + hour24.format(dateAndTimeNow))
             println("Current Hour of Day: " + hourOfDay.format(dateAndTimeNow))
             println("Current Minute: " + minute1.format(dateAndTimeNow))
             println("Current Second: " + second1.format(dateAndTimeNow))
@@ -426,7 +428,7 @@ object datetime {
                             ")"
             )
             println(
-                    "Current UTC Local Day of Week: " +
+                    "Current UTC Local Day of the Week: " +
                             localDayOfWeek.format(utcDateAndTimeNow) +
                             " (" +
                             localDayOfWeek2.format(utcDateAndTimeNow) +
@@ -442,9 +444,9 @@ object datetime {
                     "Current UTC Local Week of Month: " + localWeekOfMonth.format(utcDateAndTimeNow)
             )
             println("Current UTC AM/PM: " + amPm.format(utcDateAndTimeNow))
-            println("Current UTC 12 Hour Format " + hour12.format(utcDateAndTimeNow))
+            println("Current UTC 12-Hour Format " + hour12.format(utcDateAndTimeNow))
             println("Current UTC 0-11 Hour Format: " + hour0To11.format(utcDateAndTimeNow))
-            println("Current UTC 24 Hour Format: " + hour24.format(utcDateAndTimeNow))
+            println("Current UTC 24-Hour Format: " + hour24.format(utcDateAndTimeNow))
             println("Current UTC Hour of Day: " + hourOfDay.format(utcDateAndTimeNow))
             println("Current UTC Minute: " + minute1.format(utcDateAndTimeNow))
             println("Current UTC Second: " + second1.format(utcDateAndTimeNow))
