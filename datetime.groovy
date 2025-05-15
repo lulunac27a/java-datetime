@@ -7,9 +7,9 @@ import java.time.format.DateTimeFormatter
 import java.util.InputMismatchException
 import java.util.Scanner
 
-public class datetime {
+class datetime {
 
-    public static void main(String[] args) {
+    static void main(String[] args) {
         try (Scanner sc = new Scanner(System.in)) {
             int year, month, day, hour, minute, second, millisecond, microsecond, nanosecond//initialize date and time variables
             DateTimeFormatter era1 = DateTimeFormatter.ofPattern('GGG') // Format the date and time values with a specified pattern for all supported formats
