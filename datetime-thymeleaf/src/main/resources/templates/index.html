@@ -101,270 +101,285 @@
         <h3>Java Date and Time Object:</h3>
         Current Era:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'GGG')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'GGGG')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'GGGGG')}"
         ></span
         >)<br />
         Current Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'uu')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'uuuu')}"
         ></span
         >)<br />
         Current Era Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'yy')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'yyyy')}"
         ></span
         >)<br />
         Current Day of Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'D')}"
         ></span
         ><br />
         Current Month of Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'M')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'MMM')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'MMMM')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'MMMMM')}"
         ></span
         >)<br />
         Current Day of Month:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'd')}"
         ></span
         ><br />
         Current Quarter:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'q')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'qqq')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'qqqq')}"
         ></span
         >)<br />
         Current ISO Week-based Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'YY')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'YYYY')}"
         ></span
         >)<br />
         Current Week of Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'w')}"
         ></span
         ><br />
         Current Week of Month:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'W')}"
         ></span
         ><br />
         Current Day of Week:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'E')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'EEEE')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'EEEEE')}"
         ></span
         >)<br />
         Current Local Day of Week:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'e')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'eee')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'eeee')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'eeeee')}"
         ></span
         >)<br />
         Current Local Week of Month:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'F')}"
         ></span
         ><br />
         Current AM/PM:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'a')}"
         ></span
         ><br />
         Current 12-Hour Format:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'h')}"
         ></span
         ><br />
         Current 0-11 Hour Format:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'K')}"
         ></span
         ><br />
         Current 24-Hour Format:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'k')}"
         ></span
         ><br />
         Current Hour of Day:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'H')}"
         ></span
         ><br />
         Current Minute:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'm')}"
         ></span
         ><br />
         Current Second:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 's')}"
         ></span
         ><br />
         Current Fraction of Second:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'SSSSSSSSS')}"
         ></span
         ><br />
         Current Millisecond of Day:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'A')}"
         ></span
         ><br />
         Current Nanosecond:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'n')}"
         ></span
         ><br />
         Current Nanosecond of Day:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentDateTime, 'N')}"
         ></span
         ><br />
         <h3>Thymeleaf Date and Time Object:</h3>
         Current Year:
-        <span id="output" th:text="${#temporals.year(currentDateTime)}"></span
+        <span
+            class="output"
+            th:text="${#temporals.year(currentDateTime)}"
+        ></span
         ><br />
         Current Month:
-        <span id="output" th:text="${#temporals.month(currentDateTime)}"></span>
+        <span
+            class="output"
+            th:text="${#temporals.month(currentDateTime)}"
+        ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.monthName(currentDateTime)}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.monthNameShort(currentDateTime)}"
         ></span
         >)<br />
         Current Day:
-        <span id="output" th:text="${#temporals.day(currentDateTime)}"></span
+        <span class="output" th:text="${#temporals.day(currentDateTime)}"></span
         ><br />
         Current Day of Week:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.dayOfWeek(currentDateTime)}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.dayOfWeekName(currentDateTime)}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.dayOfWeekNameShort(currentDateTime)}"
         ></span
         >)<br />
         Current Hour:
-        <span id="output" th:text="${#temporals.hour(currentDateTime)}"></span
+        <span
+            class="output"
+            th:text="${#temporals.hour(currentDateTime)}"
+        ></span
         ><br />
         Current Minute:
-        <span id="output" th:text="${#temporals.minute(currentDateTime)}"></span
+        <span
+            class="output"
+            th:text="${#temporals.minute(currentDateTime)}"
+        ></span
         ><br />
         Current Second:
-        <span id="output" th:text="${#temporals.second(currentDateTime)}"></span
+        <span
+            class="output"
+            th:text="${#temporals.second(currentDateTime)}"
+        ></span
         ><br />
         Current Nanosecond of Second:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.nanosecond(currentDateTime)}"
         ></span
         ><br />
         Current Millisecond:
         <span
-            id="output"
+            class="output"
             th:text="${#numbers.formatInteger(T(java.lang.Math).floor((#temporals.nanosecond(currentDateTime) / 1000000) % 1000), 1)}"
         ></span
         ><br />
         Current Microsecond:
         <span
-            id="output"
+            class="output"
             th:text="${#numbers.formatInteger(T(java.lang.Math).floor((#temporals.nanosecond(currentDateTime) / 1000) % 1000), 1)}"
         ></span
         ><br />
         Current Nanosecond:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.nanosecond(currentDateTime) % 1000}"
         ></span
         ><br />
@@ -372,285 +387,288 @@
         <h3>Java Date and Time Object:</h3>
         Current UTC Era:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'GGG')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'GGGG')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'GGGGG')}"
         ></span
         >)<br />
         Current UTC Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'uu')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'uuuu')}"
         ></span
         >)<br />
         Current UTC Era Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'yy')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'yyyy')}"
         ></span
         >)<br />
         Current UTC Day of Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'D')}"
         ></span
         ><br />
         Current UTC Month of Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'M')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'MMM')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'MMMM')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'MMMMM')}"
         ></span
         >)<br />
         Current UTC Day of Month:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'd')}"
         ></span
         ><br />
         Current UTC Quarter:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'q')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'qqq')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'qqqq')}"
         ></span
         >)<br />
         Current UTC ISO Week-based Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'YY')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'YYYY')}"
         ></span
         >)<br />
         Current UTC Week of Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'w')}"
         ></span
         ><br />
         Current UTC Week of Month:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'W')}"
         ></span
         ><br />
         Current UTC Day of Week:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'E')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'EEEE')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'EEEEE')}"
         ></span
         >)<br />
         Current UTC Local Day of Week:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'e')}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'eee')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'eeee')}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'eeeee')}"
         ></span
         >)<br />
         Current UTC Local Week of Month:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'F')}"
         ></span
         ><br />
         Current UTC AM/PM:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'a')}"
         ></span
         ><br />
         Current UTC 12-Hour Format:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'h')}"
         ></span
         ><br />
         Current UTC 0-11 Hour Format:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'K')}"
         ></span
         ><br />
         Current UTC 24-Hour Format:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'k')}"
         ></span
         ><br />
         Current UTC Hour of Day:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'H')}"
         ></span
         ><br />
         Current UTC Minute:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'm')}"
         ></span
         ><br />
         Current UTC Second:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 's')}"
         ></span
         ><br />
         Current UTC Fraction of Second:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'SSSSSSSSS')}"
         ></span
         ><br />
         Current UTC Millisecond of Day:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'A')}"
         ></span
         ><br />
         Current UTC Nanosecond:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'n')}"
         ></span
         ><br />
         Current UTC Nanosecond of Day:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.format(currentUtcDateTime, 'N')}"
         ></span
         ><br />
         <h3>Thymeleaf Date and Time Object:</h3>
         Current UTC Year:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.year(currentUtcDateTime)}"
         ></span
         ><br />
         Current UTC Month:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.month(currentUtcDateTime)}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.monthName(currentUtcDateTime)}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.monthNameShort(currentUtcDateTime)}"
         ></span
         >)<br />
         Current UTC Day:
-        <span id="output" th:text="${#temporals.day(currentUtcDateTime)}"></span
+        <span
+            class="output"
+            th:text="${#temporals.day(currentUtcDateTime)}"
+        ></span
         ><br />
         Current UTC Day of Week:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.dayOfWeek(currentUtcDateTime)}"
         ></span>
         (<span
-            id="output"
+            class="output"
             th:text="${#temporals.dayOfWeekName(currentUtcDateTime)}"
         ></span
         >) (<span
-            id="output"
+            class="output"
             th:text="${#temporals.dayOfWeekNameShort(currentUtcDateTime)}"
         ></span
         >)<br />
         Current UTC Hour:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.hour(currentUtcDateTime)}"
         ></span
         ><br />
         Current UTC Minute:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.minute(currentUtcDateTime)}"
         ></span
         ><br />
         Current UTC Second:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.second(currentUtcDateTime)}"
         ></span
         ><br />
         Current UTC Nanosecond of Second:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.nanosecond(currentUtcDateTime)}"
         ></span
         ><br />
         Current UTC Millisecond:
         <span
-            id="output"
+            class="output"
             th:text="${#numbers.formatInteger(T(java.lang.Math).floor((#temporals.nanosecond(currentUtcDateTime) / 1000000) % 1000), 1)}"
         ></span
         ><br />
         Current UTC Microsecond:
         <span
-            id="output"
+            class="output"
             th:text="${#numbers.formatInteger(T(java.lang.Math).floor((#temporals.nanosecond(currentUtcDateTime) / 1000) % 1000), 1)}"
         ></span
         ><br />
         Current UTC Nanosecond:
         <span
-            id="output"
+            class="output"
             th:text="${#temporals.nanosecond(currentUtcDateTime) % 1000}"
         ></span
         ><br />
