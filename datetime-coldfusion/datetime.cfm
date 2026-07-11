@@ -379,3 +379,4 @@ Enter date and time values
     </cfoutput>
     <br>
 </cfif>
+</body>
