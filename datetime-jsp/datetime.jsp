@@ -64,30 +64,30 @@
             DateTimeFormatter nanosecondOfSecond = DateTimeFormatter.ofPattern("n");
             DateTimeFormatter nanosecondOfDay = DateTimeFormatter.ofPattern("N");
         %>
-        Era: <span id="output"><%= era1.format(enteredDateAndTime) + " (" + era2.format(enteredDateAndTime) + ")" + " (" + era3.format(enteredDateAndTime) + ")" %></span><br/>
+        Era: <span class="output"><%= era1.format(enteredDateAndTime) + " (" + era2.format(enteredDateAndTime) + ")" + " (" + era3.format(enteredDateAndTime) + ")" %></span><br/>
         <%-- Print the date and time values with formatted date and time pattern --%><br/>
-        Year: <span id="output"><%= year1.format(enteredDateAndTime) + " (" + year2.format(enteredDateAndTime) + ")" %></span><br/>
-        Era Year: <span id="output"><%= yearEra.format(enteredDateAndTime) + " (" + yearEra2.format(enteredDateAndTime) + ")" %></span><br/>
-        Day of Year: <span id="output"><%= dayOfYear.format(enteredDateAndTime) %></span><br/>
-        Month of Year: <span id="output"><%= monthOfYear.format(enteredDateAndTime) + " (" + monthOfYear2.format(enteredDateAndTime) + ")" + " (" + monthOfYear3.format(enteredDateAndTime) + ")" + " (" + monthOfYear4.format(enteredDateAndTime) + ")" %></span><br/>
-        Day of Month: <span id="output"><%= dayOfMonth.format(enteredDateAndTime) %></span><br/>
-        Quarter: <span id="output"><%= quarter.format(enteredDateAndTime) + " (" + quarter2.format(enteredDateAndTime) + ")" + " (" + quarter3.format(enteredDateAndTime) + ")" %></span><br/>
-        ISO Week-based Year: <span id="output"><%= weekBasedYear.format(enteredDateAndTime) + " (" + weekBasedYear2.format(enteredDateAndTime) + ")" %></span><br/>
-        Week of Year: <span id="output"><%= weekOfYear.format(enteredDateAndTime) %></span><br/>
-        Week of Month: <span id="output"><%= weekOfMonth.format(enteredDateAndTime) %></span><br/>
-        Day of Week: <span id="output"><%= dayOfWeek.format(enteredDateAndTime) + " (" + dayOfWeek2.format(enteredDateAndTime) + ")" + " (" + dayOfWeek3.format(enteredDateAndTime) + ")" %></span><br/>
-        Local Day of Week: <span id="output"><%= localDayOfWeek.format(enteredDateAndTime) + " (" + localDayOfWeek2.format(enteredDateAndTime) + ")" + " (" + localDayOfWeek3.format(enteredDateAndTime) + ")" + " (" + localDayOfWeek4.format(enteredDateAndTime) + ")" %></span><br/>
-        Local Week of Month: <span id="output"><%= localWeekOfMonth.format(enteredDateAndTime) %></span><br/>
-        AM/PM: <span id="output"><%= amPm.format(enteredDateAndTime) %></span><br/>
-        12 Hour Format: <span id="output"><%= hour12.format(enteredDateAndTime) %></span><br/>
-        0-11 Hour Format: <span id="output"><%= hour0_11.format(enteredDateAndTime) %></span><br/>
-        24 Hour Format: <span id="output"><%= hour24.format(enteredDateAndTime) %></span><br/>
-        Hour of Day: <span id="output"><%= hourOfDay.format(enteredDateAndTime) %></span><br/>
-        Minute: <span id="output"><%= minute1.format(enteredDateAndTime) %></span><br/>
-        Second: <span id="output"><%= second1.format(enteredDateAndTime) %></span><br/>
-        Fraction of Second: <span id="output"><%= fractionOfSecond.format(enteredDateAndTime) %></span><br/>
-        Millisecond of Day: <span id="output"><%= millisecondOfDay.format(enteredDateAndTime) %></span><br/>
-        Nanosecond: <span id="output"><%= nanosecondOfSecond.format(enteredDateAndTime) %></span><br/>
-        Nanosecond of Day: <span id="output"><%= nanosecondOfDay.format(enteredDateAndTime) %></span><br/>
+        Year: <span class="output"><%= year1.format(enteredDateAndTime) + " (" + year2.format(enteredDateAndTime) + ")" %></span><br/>
+        Era Year: <span class="output"><%= yearEra.format(enteredDateAndTime) + " (" + yearEra2.format(enteredDateAndTime) + ")" %></span><br/>
+        Day of Year: <span class="output"><%= dayOfYear.format(enteredDateAndTime) %></span><br/>
+        Month of Year: <span class="output"><%= monthOfYear.format(enteredDateAndTime) + " (" + monthOfYear2.format(enteredDateAndTime) + ")" + " (" + monthOfYear3.format(enteredDateAndTime) + ")" + " (" + monthOfYear4.format(enteredDateAndTime) + ")" %></span><br/>
+        Day of Month: <span class="output"><%= dayOfMonth.format(enteredDateAndTime) %></span><br/>
+        Quarter: <span class="output"><%= quarter.format(enteredDateAndTime) + " (" + quarter2.format(enteredDateAndTime) + ")" + " (" + quarter3.format(enteredDateAndTime) + ")" %></span><br/>
+        ISO Week-based Year: <span class="output"><%= weekBasedYear.format(enteredDateAndTime) + " (" + weekBasedYear2.format(enteredDateAndTime) + ")" %></span><br/>
+        Week of Year: <span class="output"><%= weekOfYear.format(enteredDateAndTime) %></span><br/>
+        Week of Month: <span class="output"><%= weekOfMonth.format(enteredDateAndTime) %></span><br/>
+        Day of Week: <span class="output"><%= dayOfWeek.format(enteredDateAndTime) + " (" + dayOfWeek2.format(enteredDateAndTime) + ")" + " (" + dayOfWeek3.format(enteredDateAndTime) + ")" %></span><br/>
+        Local Day of Week: <span class="output"><%= localDayOfWeek.format(enteredDateAndTime) + " (" + localDayOfWeek2.format(enteredDateAndTime) + ")" + " (" + localDayOfWeek3.format(enteredDateAndTime) + ")" + " (" + localDayOfWeek4.format(enteredDateAndTime) + ")" %></span><br/>
+        Local Week of Month: <span class="output"><%= localWeekOfMonth.format(enteredDateAndTime) %></span><br/>
+        AM/PM: <span class="output"><%= amPm.format(enteredDateAndTime) %></span><br/>
+        12 Hour Format: <span class="output"><%= hour12.format(enteredDateAndTime) %></span><br/>
+        0-11 Hour Format: <span class="output"><%= hour0_11.format(enteredDateAndTime) %></span><br/>
+        24 Hour Format: <span class="output"><%= hour24.format(enteredDateAndTime) %></span><br/>
+        Hour of Day: <span class="output"><%= hourOfDay.format(enteredDateAndTime) %></span><br/>
+        Minute: <span class="output"><%= minute1.format(enteredDateAndTime) %></span><br/>
+        Second: <span class="output"><%= second1.format(enteredDateAndTime) %></span><br/>
+        Fraction of Second: <span class="output"><%= fractionOfSecond.format(enteredDateAndTime) %></span><br/>
+        Millisecond of Day: <span class="output"><%= millisecondOfDay.format(enteredDateAndTime) %></span><br/>
+        Nanosecond: <span class="output"><%= nanosecondOfSecond.format(enteredDateAndTime) %></span><br/>
+        Nanosecond of Day: <span class="output"><%= nanosecondOfDay.format(enteredDateAndTime) %></span><br/>
         </body>
         </html>
